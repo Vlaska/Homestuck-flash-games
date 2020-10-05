@@ -1,0 +1,201 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://John/Graphics/79.png" type="Texture" id=1]
+[ext_resource path="res://John/Graphics/77.png" type="Texture" id=2]
+[ext_resource path="res://John/Graphics/78.png" type="Texture" id=3]
+[ext_resource path="res://John/Graphics/81.png" type="Texture" id=5]
+[ext_resource path="res://John/Graphics/80.png" type="Texture" id=6]
+[ext_resource path="res://John/Graphics/82.png" type="Texture" id=7]
+[ext_resource path="res://John/Graphics/83.png" type="Texture" id=8]
+[ext_resource path="res://John/Graphics/85.png" type="Texture" id=9]
+[ext_resource path="res://John/Graphics/84.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "StillBack"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -54.65, -204.15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "StillFront"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -53.65, -210.15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "WalkBack"
+length = 14.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -55.65, -206.15 ), Vector2( -54.65, -204.15 ), Vector2( -54.65, -204.15 ), Vector2( -85.65, -203.15 ), Vector2( -83.65, -207.15 ), Vector2( -54.65, -204.15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 0.999999, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 14.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -72.65, -212.15 ), Vector2( -53.65, -210.15 ), Vector2( -54.65, -209.15 ), Vector2( -53.65, -210.15 ), Vector2( -49.65, -214.15 ), Vector2( -53.65, -210.15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 2 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "StillBack"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "StillFront"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=7]
+blend_point_0/node = SubResource( 5 )
+blend_point_0/pos = -0.01
+blend_point_1/node = SubResource( 6 )
+blend_point_1/pos = 0.01
+snap = 0.01
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "WalkBack"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "WalkFront"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=10]
+blend_point_0/node = SubResource( 8 )
+blend_point_0/pos = -0.01
+blend_point_1/node = SubResource( 9 )
+blend_point_1/pos = 0.01
+snap = 0.01
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachine" id=13]
+states/Still/node = SubResource( 7 )
+states/Still/position = Vector2( 374, 159 )
+states/Walk/node = SubResource( 10 )
+states/Walk/position = Vector2( 607, 159 )
+transitions = [ "Still", "Walk", SubResource( 11 ), "Walk", "Still", SubResource( 12 ) ]
+start_node = "Still"
+
+[sub_resource type="AnimationNodeTimeScale" id=14]
+
+[sub_resource type="AnimationNodeBlendTree" id=15]
+graph_offset = Vector2( 0, -203 )
+nodes/State/node = SubResource( 13 )
+nodes/State/position = Vector2( 820, 80 )
+nodes/TimeScale/node = SubResource( 14 )
+nodes/TimeScale/position = Vector2( 1100, -120 )
+nodes/output/position = Vector2( 1360, 80 )
+node_connections = [ "output", 0, "State" ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+
+[node name="JohnSprite" type="Sprite"]
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -53.65, -210.15 )
+__meta__ = {
+"_edit_vertical_guides_": [ -3.14813 ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 35.0
+anims/StillBack = SubResource( 1 )
+anims/StillFront = SubResource( 2 )
+anims/WalkBack = SubResource( 3 )
+anims/WalkFront = SubResource( 4 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 15 )
+anim_player = NodePath("../AnimationPlayer")
+process_mode = 2
+parameters/State/playback = SubResource( 16 )
+parameters/State/Still/blend_position = -0.00644124
+parameters/State/Walk/blend_position = 0.250403
+parameters/TimeScale/scale = 35.0

@@ -1,0 +1,416 @@
+KEY,en,pl
+SPRITE_CLICKS_0_0,WHAT'S THAT,CO TO
+SPRITE_CLICKS_0_1,"It looks different now. 
+
+After you bit that APPLE, your whole house seemed to be trasported somewhere. Then the APPLE disappeared and the KERNELSPRITE underwent a transformation. Aside from the change in appearance, the transformation doesn't seem to have any relevant ramifications. 
+
+You still can't understand a word this idiot says.","Wygląda teraz inaczej
+
+Zdaje się, że cały twój dom został gdzieś przeniesiony po tym, jak ugryzłeś tamto JABŁKO. Potem JABŁKO zniknęło i KERNELSPRITE
+przeszedł transformację. Pomijając zmianę w wyglądzie, transformacja zdaje się nie mieć żadnych istotnych konsekwencji.
+
+Nadal nie rozumiesz słowa z tego, co gada ten idiota."
+SPRITE_CLICKS_1_0,THE GHOST CLOWN. DO SOMETHING WITH IT.,DUCH KLAUNA. ZRÓB COŚ Z NIM.
+SPRITE_CLICKS_1_1,"The 'GHOST CLOWN' is called the KERNELSPRITE! Or, rather just the SPRITE now, I suppose.
+
+You can't 'DO SOMETHING' with it at the moment! The only thing you can theoretically do with it is TIER 2 PROTOTYPE IT, assuming that's still possible...","Ten ""DUCH KLAUNA"" nazywa się KERNELSPRITE!
+
+Lub teraz raczej tylko SPRITE, jak sądzę. Nie możesz ""ZROBIĆ Z NIM CZEGOŚ"" na ten moment! Jedyna rzecz, jaką możesz z nim w tej chwili zrobić, to SPROTOTYPOWAĆ go do POZIOMU 2, zakładając iż jest to
+nadal możliwe..."
+SPRITE_CLICKS_2_0,"TIER PROTO TYPE THE SPRITE, OR THE THING YOU SAID. DO IT.","SPROTOTYPUJ POZIOM SPRITE’A, CZY JAK TĘ RZECZ NAZWAŁEŚ. ZRÓB TO."
+SPRITE_CLICKS_2_1,You are not the one who is supposed to prototype it! The SBURB SERVER USER is supposed to do that.,To nie ty masz go sprototypować! Ma to zrobić UŻYTKOWNIK SERWERA SBURB!
+CHAR_CLICKS_0_0,YOU THERE. BOY.,TY TAM. CHŁOPCZE.
+CHAR_CLICKS_0_1,"...
+
+What?","...
+
+Co?"
+CHAR_CLICKS_1_0,"BOY. LISTEN TO ME, BOY.","CHŁOPCZE. POSŁUCHAJ MNIE, CHŁOPCZE."
+CHAR_CLICKS_1_1,"His name is John, you nincompoop.","On się nazywa John, gamoniu."
+CHAR_CLICKS_2_0,BOY WHO IS JOHN. DO AS I SAY.,"CHŁOPCZE, KTÓRY JESTEŚ JOHNEM. ZRÓB JAK MÓWIĘ."
+CHAR_CLICKS_2_1,What would you like 'BOY WHO IS JOHN' to do?,"Co byś chciał, aby zrobił ""CHŁOPIEC, KTÓRY JEST JOHNEM""?"
+CHAR_CLICKS_3_0,"OBEY MY COMMANDS, JOHN BOY.","SŁUCHAJ MOICH KOMEND, JOHNIE CHŁOPCZE."
+CHAR_CLICKS_3_1,And those commands would be...?,A te komendy to...?
+CHAR_CLICKS_4_0,I WOULD LIKE THE BOY TO INTERACT WITH HIS ENVIRONMENT IN A CONSTRUCTIVE MANNER.,"CHCIAŁBYM, ABY CHŁOPIEC WSZEDŁ W INTERAKCJĘ ZE 
+SWOIM OTOCZENIEM W SPOSÓB KONSTRUKTYWNY."
+CHAR_CLICKS_4_1,Maybe you should be a little more specific?,Może powinieneś być bardziej precyzyjny?
+CHAR_CLICKS_5_0,HAVE THE BOY ASSESS HIS CURRENT SITUATION.,"SPRAW, BY CHŁOPIEC OCENIŁ SWOJĄ AKTUALNĄ SYTUACJĘ."
+CHAR_CLICKS_5_1,I'm afraid I can't 'HAVE THE BOY' do that. Tell him to do it yourself!,"Obawiam się, że nie mogę ""SPRAWIĆ, ŻEBY CHŁOPIEC"" to zrobił. Powiedz
+mu, by sam to zrobił!"
+CHAR_CLICKS_6_0,VERY WELL.,DOBRZE.
+CHAR_CLICKS_6_1,"...
+
+Ok.","...
+
+W porządku."
+CHAR_CLICKS_7_0,==>,==>
+CHAR_CLICKS_7_1,That instruction does not do anything at the moment!!!,Ta instrukcja nic nie wnosi na ten moment!!!
+CHAR_CLICKS_8_0,==>,==>
+CHAR_CLICKS_8_1,Sigh. Could you please turn the controls over to a more competent user?,Ehh. Mógłbyś przekazać kontrolery jakiemuś bardziej kompetentnemu użytkownikowi?
+CHAR_CLICKS_9_0,ASLFSAKLADAK,ASLFSAKLADAK
+CHAR_CLICKS_9_1,"Increasingly sophomoric.
+
+Also, you almost spelled 'SALAD' in there.","Totalna dziecinada.
+
+Swoją drogą, prawie napisałeś tam ""SKŁADAK""."
+OUTSIDECUFFS_0_0,CLAIM THE DANGLING TREE-BAUBLE.,ODBIERZ DYNDAJĄCE Z DRZEWA ŚWIECIDEŁKO.
+OUTSIDECUFFS_0_1,"The TRICK HANDCUFFS are still there! THANK GOD.
+
+And no, you are not about to try to 'claim' them just now.","KAJDANKI DO TRIKÓW wciąż tu są! DZIĘKI BOŻE.
+
+I nie, nie masz zamiaru ich teraz ""odbierać""."
+OUTSIDESWING_0_0,"BOY, ENGAGE THIS MANGLED TRAPESE-DISPLAY.","CHŁOPCZE, ZAINTERESUJ SIĘ TĄ ZMIAŻDŻONĄ W TRAPEZ EKSPOZYCJĄ."
+OUTSIDESWING_0_1,Looks like your SWING SET is toast. You relive fond memories in a moment of sorrow.,"Wygląda na to, że twoja huśtawka się usmażyła. Przeżywasz ponownie miłe wspomnienia w chwili smutku."
+OUTSIDESLIMER_0_0,PONDER LAWN AMUSEMENT.,KONTEMPLUJ TRAWNIKOWĄ ROZRYWKĘ.
+OUTSIDESLIMER_0_1,"Your childhood nemesis, the SPRING-MOUNTED POGO-RIDE, sadly was not swallowed by the void. It will have to wait another day for its comeuppance.","Twoja zmora z dzieciństwa, HUŚTAWKA SPRĘŻYNOWA, niestety nie została połknięta przez nicość. Będzie musiała poczekać kolejny dzień na jej przybycie."
+OUTSIDEWIRES_0_0,FIDDLE WITH THE BRIGHT SPARKLY THINGS.,POBAW SIĘ JASNYMI ŚWIECĄCYMI RZECZAMI.
+OUTSIDEWIRES_0_1,That sounds incredibly dangerous! John sensibly disregards your awful advice.,"To brzmi niewiarygodnie niebezpiecznie! John rozsądnie ignoruje
+twoją okropną radę."
+OUTSIDEGAUGE_0_0,ADMIRE THIS WALL-MOUNTED GADGET.,PODZIWIAJ TO WMONTOWANE W ŚCIANĘ URZĄDZENIE.
+OUTSIDEGAUGE_0_1,"Through some mysterious force, your house still seems to be powered, even though the wires are severed. Quite bizarre.","Dzięki jakiejś tajemniczej sile twój dom zdaje się być wciąż
+zasilany, mimo iż przewody są uszkodzone. Dość dziwaczne."
+UTILCABINET_0_0,OPEN THESE AND RIFLE THROUGH THEM FOR GOODS.,OTWÓRZ JE I POSZPERAJ W POSZUKIWANIU DÓBR.
+UTILCABINET_0_1,You don't give a shit about what's in there! Probably nothing you'd be inclined to use now anyway.,"W dupie masz, co tam jest! Prawdopodobnie i tak nic, co byłbyś skłonny użyć."
+UTILWASHER_0_0,THIS IS NO TIME FOR LAUNDRY.,TO NIE CZAS NA PRANIE.
+UTILWASHER_0_1,You're right. Thank you for being sensible about it.,Masz rację. Dziękuję za twój rozsądek.
+KITCHPHONE_0_0,"THIS IS A TELEPHONE, BOY. USE IT.","TO JEST TELEFON, CHŁOPCZE. TERAZ GO UŻYJ."
+KITCHPHONE_0_1,The phone doesn't work!,Telefon nie działa!
+KITCHBOWL_0_0,PEEK IN BOWL OF GOO.,ZAJRZYJ DO MISKI Z MAZIĄ.
+KITCHBOWL_0_1,"Wherever your DAD went, he seems to have left in a hurry.
+
+For all his absurdities you have to put up with, you sure wish he were here right now.","Gdziekolwiek poszedł twój TATA, zdaje się, że wyszedł w pośpiechu.
+
+W obliczu wszystkich absurdów, z jakimi musisz sobie radzić,
+naprawdę chciałbyś, aby teraz tu był."
+KITCHBETTY_0_0,SAMPLE POWDERED UNCOOKED DESSERT.,SPRÓBUJ NIEGOTOWEGO DESERU W PROSZKU.
+KITCHBETTY_0_1,Back ye miserable wench! Stay thy choking airborne particulates of temptation!!!,"Cofnij się, nędzny babolu! Udław się swoimi przenoszonymi drogą
+kropelkową cząsteczkami pokusy!!!"
+KITCHBOOK_0_0,THIS BOOK IS TOO BIG FOR A YOUNG STUPID BOY.,TA KSIĄŻKA JEST ZBYT WIELKA DLA MŁODEGO GŁUPIEGO CHŁOPCA.
+KITCHBOOK_0_1,COLONEL SASSACRE'S is your favorite book! Almost as favorite as WISE GUY! They are both your favoritest of all time!,"COLONEL SASSACRE to twoja ulubiona książka! Niemalże tak samo
+ulubiona jak MĄDRY CZŁOWIEK! Są twoimi najulubieńszymi na świecie!"
+KITCHHUTCH_0_0,PLUNDER CHEST.,SPLĄDRUJ SKRZYNIĘ.
+KITCHHUTCH_0_1,Would you like to play a game?,Chciałbyś zagrać w grę?
+KITCHSPLATS_0_0,EXAMINE THIS SMEARED SUBSTANCE.,ZBADAJ TĘ ROZMAZANĄ SUBSTANCJĘ.
+KITCHSPLATS_0_1,"Is this... 
+
+Oil?
+
+You wonder what happened in here. Where's your DAD?","Czy to...
+
+Olej?
+
+Zastanawiasz się, co się tu stało. Gdzie jest twój TATA?"
+KITCHPLANT_0_0,SNIFF VEGETABLE.,POWĄCHAJ WARZYWO.
+KITCHPLANT_0_1,Doesn't smell like anything.,Zapach podobny zupełnie do niczego.
+STUDYRACK_0_0,DISREGARD THIS NONSENSE.,IGNORUJ TĘ NIEDORZECZNOŚĆ.
+STUDYRACK_0_1,"Your DAD used this stuff sometimes to dazzle you with his silly vaudevillian escapades. Really, you couldn't roll your eyes hard enough at his corny act.","Twój TATA używał czasem tych rzeczy, by olśniewać cię swoimi
+wodewilowymi eskapadami. Naprawdę, nie mógłbyś bardziej przewrócić
+oczami na jego kiepską grę aktorską."
+STUDYMAGAZINE_0_0,READ UNPLEASANT LITERATURE.,PRZECZYTAJ NIEPRZYJEMNĄ LITERATURĘ.
+STUDYMAGAZINE_0_1,"SERIOUS JESTER MAGAZINE.
+
+FOR THOSE FOR WHOM CLOWNING AROUND IS SERIOUS BUSINESS.","MAGAZYN POWAŻNY BŁAZEN.
+
+DLA TYCH, DLA KTÓRYCH BŁAZNOWANIE TO POWAŻNY BIZNES."
+STUDYCAN_0_0,CONSUME NUT.,ZJEDZ ORZECHA.
+STUDYCAN_0_1,"You would, but you're not sure if this dark realm has any hospitals.","Zrobiłbyś to, ale nie jesteś pewien, czy w tej ciemnej krainie są
+jakieś szpitale."
+STUDYSAFE_0_0,"OPEN THIS IRON VAULT, BOY.","OTWÓRZ TEN ŻELAZNY SKARBIEC, CHŁOPCZE."
+STUDYSAFE_0_1,You don't know the combination!!!,Nie znasz kombinacji!!!
+STUDYCLOWN2_0_0,SEEK THE RICHES HE GUARDS BELOW.,SZUKAJ BOGACTW KTÓRYCH STRZEŻE PONIŻEJ.
+STUDYCLOWN2_0_1,"This one offers a friendly wave.
+
+But yeah, this is really just another stupid piece of shit.","Ten macha po przyjacielsku.
+
+Ale taa, tak naprawdę to po prostu kolejne głupie gówno."
+STUDYWINDOW_0_0,LOOK HERE.,SPÓJRZ TUTAJ.
+STUDYWINDOW_0_1,It's dark out there. Can't see anything for miles.,Ciemno tam. Nie widzisz nic na kilometr.
+STUDYPIC2_0_0,I SEE TREACHERY IN HIS EYES.,WIDZĘ ZDRADĘ W JEGO OCZACH.
+STUDYPIC2_0_1,"Oh, he doesn't look so bad.","Och, nie wygląda tak źle."
+STUDYPIC1_0_0,THIS MAN IS AN IMBECILE. IGNORE HIM.,TEN CZŁOWIEK JEST IMBECYLEM. ZIGNORUJ GO.
+STUDYPIC1_0_1,"He's alright. Looks like he doesn't take himself to seriously, and knows how to have a good time.
+
+You can only assume your DAD hung it crooked to make it look more 'whimsical'.","Jest w porządku. Wygląda na to, że nie bierze siebie na poważnie
+i wie jak dobrze się bawić. Przypuszczasz, że twój TATA powiesił go
+krzywo, by wyglądał bardziej ""figlarnie""."
+STUDYJOKER_0_0,IT HAS A KNIFE. BE ALARMED BY THIS.,ON MA NÓŻ. BÓJ SIĘ.
+STUDYJOKER_0_1,R.I.P. Ledger.,R.I.P. Ledger.
+STUDYCLOWN1_0_0,THROW THIS UGLY THING OUT THE WINDOW.,WYRZUĆ TĘ BRZYDKĄ RZECZ PRZEZ OKNO.
+STUDYCLOWN1_0_1,"You will not do that intentionally!
+
+You only resort to throwing stuff out the window via SYLLADEX mismanagement.","Nie zrobiłbyś tego specjalnie!
+
+Uciekasz się do wyrzucania rzeczy przez okno tylko przez
+nieumiejętne zarządzanie SYLADEKSEM."
+STUDYPIPE_0_0,IS THIS TOBACCO BURNING APPARATUS?,CZY TO PRZYRZĄD DO PALENIA TYTONIU?
+STUDYPIPE_0_1,Yuck. You still have pipe-taste in your mouth.,Fuj. W ustach wciąż czujesz smak fajki.
+STUDYMURAL_0_0,INSPECT THIS MERRY BAND OF PERFORMERS.,ZBADAJ TĘ RADOSNĄ GRUPĘ SZTUKMISTRZÓW.
+STUDYMURAL_0_1,Cirque du Soleil once filed a restraining order against your father. You were never so embarrassed in your life.,"Cirque du Soleil niegdyś wniósł o zakaz zbliżania się przeciw
+twojemu ojcu. Nigdy w życiu nie byłeś tak zażenowany."
+STUDYCARDS_0_0,"THIS IS A MESS, BOY.","NIEZŁY BAŁAGAN, CHŁOPCZE."
+STUDYCARDS_0_1,You're so glad your DAD wasn't watching when you did this. He never would have let you hear the end of it.,"Cieszysz się, że twój TATA nie widział, że to zrobiłeś. Nie dałby ci spokoju."
+STUDYPIANO_0_0,OPERATE THIS INSTRUMENT.,OBSŁUŻ TEN INSTRUMENT.
+STUDYPIANO_0_1,You play your favorite haunting refrain.,Grasz swoją ulubioną poruszającą melodię.
+BATHWINDOW_0_0,PEER THROUGH THAT WINDOW.,WYJRZYJ PRZEZ OKNO.
+BATHWINDOW_0_1,"At least your back yard was salvaged too.
+
+Sort of.","Przynajmniej twoje podwórko zostało uratowane.
+
+Powiedzmy."
+BATHTOILET_0_0,YOUR PLUMBING APPEARS FAULTY.,TWOJA INSTALACJA KANALIZACYJNA ZDAJE SIĘ BYĆ USZKODZONA.
+BATHTOILET_0_1,"Man, Rose did such a piss-poor job of fixing the bathroom. It would almost certainly be a mistake to try to use the toilet!
+
+You guess you could just go pee over the edge of the cliff...","Rany, Rose zrobiła naprawdę chujową robotę próbując naprawić
+łazienkę. To byłby prawie na pewno błąd, aby próbować teraz
+skorzystać z toalety! Równie dobrze możesz po prostu wyszczać się za krawędź klifu... "
+BATHTUB_0_0,YOUR PLUMBING APPEARS FAULTY.,TWOJA INSTALACJA KANALIZACYJNA ZDAJE SIĘ BYĆ USZKODZONA.
+BATHTUB_0_1,"Man, Rose did such a piss-poor job of fixing the bathroom. It would almost certainly be a mistake to try to use the toilet!
+
+You guess you could just go pee over the edge of the cliff...","Rany, Rose zrobiła naprawdę chujową robotę próbując naprawić
+łazienkę. To byłby prawie na pewno błąd, aby próbować teraz
+skorzystać z toalety! Równie dobrze możesz po prostu wyszczać się za krawędź klifu... "
+HALLPIC_0_0,I AM NOT FOND OF THIS SMUG FELLOW.,NIE PODOBA MI SIĘ TEN ZADOWOLONY Z SIEBIE FACET.
+HALLPIC_0_1,"THE MAN. THE MYTH. THE LEGEND.
+
+What do you have up your sleeve there, Anderson?
+
+Look at that poker face. He's not telling a soul!","CZŁOWIEK. MIT. LEGENDA.
+
+Jakiego masz asa w rękawie, Anderson?
+
+Spójrz na tę pokerową twarz. Żywej duszy nic nie powie!"
+HALLDOORDAD_0_0,OPEN THIS.,OTWÓRZ TO.
+HALLDOORDAD_0_1,Your DAD'S room is still locked!!!,Pokój twojego TATY jest wciąż zamknięty!!!
+ROOMMONSTERS_0_0,INSPECT THIS GHASTLY MAN AND HIS BOY.,ZBADAJ TEGO OKROPNEGO MĘŻCZYZNĘ I JEGO CHŁOPCA.
+ROOMMONSTERS_0_1,"'Fred Savage has a punchable face' your ass! More like a talented young actor's face who you would want to hang out with if you got the chance, and also if he were not a fully grown man now.
+
+Anyway, the thought of monsters lurking in your house scares the shit out of you, which is why this movie is so awesome. But the fact that those monsters could also be your BEST FRIEND is what makes it DOUBLY AWESOME.","""Fred Savage ma twarz idealną do bicia"", mój Boże! Raczej ma twarz utalentowanego młodego aktora, z którym chciałbyś się zadawać, jeśli miałbyś szansę, również jeśli nie byłby teraz całkiem dorosłym
+mężczyzną.
+
+Poza tym przeraża cię nie na żarty myśl o potworach czających się w
+twoim domu, przez co właśnie ten film jest taki odjechany. Ale fakt, że te potwory mogłyby być także twoimi NAJLEPSZYMI PRZYJACIÓŁMI czyni go PODWÓJNIE ODJECHANYM!"
+ROOMCPU_0_0,INVESTIGATE THIS DEVICE.,ZBADAJ TO URZĄDZENIE.
+ROOMCPU_0_1,"It seems you are still connected to the internet. Rose is trying to get in touch with you.
+
+You will reply in a moment, once you have fully assessed your situation.","Zdaje się, że nadal jesteś połączony z internetem. Rose próbuje się
+z tobą skontaktować.
+
+Odpowiesz jej za moment, gdy w pełni ocenisz swoją sytuację."
+ROOMBOOK_0_0,THIS FUNNYMAN TEXT. YOU SHOULD IGNORE IT.,KSIĄŻKA TEGO DOWCIPNISIA. POWINIENEŚ JĄ ZIGNOROWAĆ.
+ROOMBOOK_0_1,"Just looking at the cover cracks you up! What a great book. Harry Anderson is your hero, and Mike Caveney's glowing treatment of the man does him every bit of justice.
+
+You'll have to give this another read soon.","Już samo patrzenie na okładkę cię rozwala! Co za wspaniała książka.
+Harry Anderson jest twoim bohaterem, a wspaniałe traktowanie ludzi
+przez Mike’a Caveney oddaje mu wszelką sprawiedliwość.
+
+Musisz niedługo znowu ją przeczytać."
+ROOMLATHE_0_0,THIS HUGE SEWING MACHINE. OF WHAT USE IS IT.,TA WIELKA MASZYNA DO SZYCIA. JAKIE MA ZASTOSOWANIE.
+ROOMLATHE_0_1,The PUNCH CARD seemed to contain the instructions for carving a TOTEM of a certain shape. You guess maybe other PUNCH CARDS will produce different shapes? It bears further exploration.,"KARTA DZIURKOWANA zdawała się zawierać instrukcje do wyrzeźbienia
+TOTEMU w konkretnym kształcie. Myślisz, że może inne KARTY
+DZIURKOWANE produkują inne kształty? To wymaga dalszych badań."
+ROOMWINDOW_0_0,"BOY, LOOK THROUGH THIS WINDOW.","CHŁOPCZE, POPATRZ PRZEZ TO OKNO."
+ROOMWINDOW_0_1,"At least your TIRE SWING remains unmolested. A tree without a tire swing is like...
+
+Like a house without a surrounding neighborhood, you guess.","Przynajmniej twoja HUŚTAWKA Z OPONY nie została zmolestowana. Dom
+bez huśtawki z opony jest jak...
+
+Jak dom bez otaczającego go sąsiedztwa, tak sądzisz."
+ROOMMACNME_0_0,MARVEL AT THIS ADVENTURE IN OUTER SPACE.,PODZIWIAJ TĘ PRZYGODĘ W PRZESTRZENI KOSMICZNEJ.
+ROOMMACNME_0_1,"This movie is...
+
+Ok, this movie is really bad. Not even you can defend it. You've been meaning to take this poster down, actually.","Ten film jest...
+
+Dobra, ten film jest naprawdę zły. Nawet ty nie potrafisz go obronić. Właściwie to miałeś zamiar zdjąć ten plakat."
+ROOMGHOSTBUSTERS_0_0,ARMED FOES OF THE DECEASED?,UZBROJENI WROGOWIE ZMARŁYCH?
+ROOMGHOSTBUSTERS_0_1,"Most people say the second one was not as great as the first, but you feel just the opposite. It was really cool and sort of gross how they hosed each other down with slime that made people angry.
+
+TG refers to the film as 'nasty manbro bukkake theater', whatever the hell that means.","Większość osób uważa, że drugi nie był tak świetny jak pierwszy, ale
+ty sądzisz inaczej. To było naprawdę super i nieco obrzydliwe jak
+polewali się śluzem z węża, co zdenerwowało ludzi.
+
+TG określa ten film jako ""brzydki teatrzyk z bukkake dla
+ludzi pokroju jego brata"", cokolwiek to ma do cholery znaczyć."
+ROOMCONAIR_0_0,IS THAT JOHN CUSACK?,CZY TO JOHN CUSACK?
+ROOMCONAIR_0_1,"Yeah, you guess so, but damn that door be coverin' up your man Cage something serious. That ain't cool!","Taa, tak sądzisz, ale cholera - te drzwi zasłaniają sporą część twojego
+ziomka Cage’a. Niefajnie!"
+ROOMTOWEL_0_0,ACQUIRE THIS SMALL PERSIAN RUG.,POZYSKAJ TEN MAŁY PERSKI DYWAN.
+ROOMTOWEL_0_1,"It's a towel, dumbass! It will probably come in handy for cleaning up this weird mess in your room. Not that it's a huge priority, though.","To jest ręcznik, debilu! Przyda się prawdopodobnie, aby posprzątać
+ten dziwny bałagan w twoim pokoju. Nie żeby to był jednak jakiś
+wielki priorytet."
+ROOMSPLATS_0_0,EXAMINE THIS UNPLEASANT FLUID.,ZBADAJ TĘ NIEPRZYJEMNĄ CIECZ.
+ROOMSPLATS_0_1,What is this stuff?,Co to za syf?
+ROOMBOX_0_0,OBSERVE THIS BOX.,OBSERWUJ TO PUDEŁKO.
+ROOMBOX_0_1,"THE BUNNY IS NOT IN THE BOX.
+
+I SAID, THE BUNNY IS NOT IN THE BOX.
+
+WHY COULDN'T THE BUNNY BE IN THE BOX?","KRÓLIK NIE JEST W PUDEŁKU.
+
+POWIEDZIAŁEM, KRÓLIK NIE JEST W PUDEŁKU.
+
+DLACZEGO KRÓLIK NIE MOŻE BYĆ W PUDEŁKU?"
+ROOMBEDDOOR_0_0,THIS DOOR. EXPLAIN THIS.,TE DRZWI. WYJAŚNIJ TO.
+ROOMBEDDOOR_0_1,"Rose sure did a number on your house. But you guess she did manage to save your life.
+
+YOU GUESS.","Rose na pewno uszkodziła twój dom. Ale przypuszczasz, że naprawdę
+udało jej się uratować ci życie.
+
+TAK PRZYPUSZCZASZ."
+LIVINGQUIN2_0_0,NO NO NO NO NO. KEEP MOVING.,NIE NIE NIE NIE NIE. IDŹ DALEJ.
+LIVINGQUIN2_0_1,"Believe me, you have no intention of turning your head to observe this dreadful thing.","Uwierz mi, nie masz najmniejszego zamiaru obracać głowy, aby
+obserwować tę potworną rzecz."
+LIVINGQUIN1_0_0,I DETEST THIS! DISREGARD IT?,NIENAWIDZĘ TEGO! ZIGNORUJ TO?
+LIVINGQUIN1_0_1,"The HARLEQUIN PAINTING? 
+
+You have the sentiment in common with John then, I suppose.","OBRAZ HARLEKINA?
+
+Masz do niego taki sam sentyment jak John, jak przypuszczam."
+LIVINGBEAGLE_0_0,THAT MAN WITH THE HUMOROUS SPECTACLES. ADMIRE HIM.,TAMTEN MĘŻCZYZNA W ŚMIESZNYCH OKULARACH. PODZIWIAJ GO.
+LIVINGBEAGLE_0_1,"Oh, Michael Cera. Your warm smile is a shining beacon in these dark times.","Och, Michael Cera. Twój uśmiech rozświetla te mroczne czasy."
+BALCRAIL_0_0,PEEK OVER THE RAILING.,WYJRZYJ PRZEZ BALUSTRADĘ.
+BALCRAIL_0_1,Getting close to the railing makes you a little nervous. It's a long way down.,"Podejście do balustrady sprawia, że nieco się denerwujesz. To
+kawał drogi w dół."
+BALCCRUXITE_0_0,EXAMINE THE STRANGE BLUE VASE.,ZBADAJ DZIWNĄ NIEBIESKĄ WAZĘ.
+BALCCRUXITE_0_1,"It is the piece of CRUXITE you carved with the TOTEM LATHE.
+
+When its contours were scanned, the ALCHEMITER was able to produce that tree. How odd!","To kawałek SEDNYTU, który wyrzeźbiłeś TOKARKĄ TOTEMÓW.
+
+Gdy jego kontury zostały zeskanowane, ALCHEMIZER był w stanie wyprodukować tamto drzewo. Jakie to dziwne!"
+BALCALCHEMITER_0_0,"THIS LARGE PLATFORM. GOOD GRIEF, WHAT IS IT BOY?","TA DUŻA PLATFORMA. O RANY, CO TO JEST CHŁOPCZE?"
+BALCALCHEMITER_0_1,"The ALCHEMITER created the APPLE, or the tree that sprouted it rather, right on time to save you from destruction. You're not sure if you can say the same for your neighborhood though.
+
+You wonder what happened to your DAD?","ALCHEMIZER stworzył JABŁKO, lub raczej drzewo, które je wydało,
+dokładnie na czas, aby uratować cię przed zagładą. Nie jesteś
+jednak pewien, czy możesz powiedzieć to samo o swojej okolicy.
+
+Zastanawiasz się, co się stało z twoim TATĄ?"
+CHAR_0_0,YOU THERE. BOY.,TY TAM. CHŁOPCZE.
+CHAR_0_1,"...
+
+What?","...
+
+Co?"
+BALCDOOR_0_0,"BOY, OPEN THIS DOOR AND WALK THROUGH IT.","CHŁOPCZE, OTWÓRZ TE DRZWI I PRZEJDŹ PRZEZ NIE."
+LIVINGDOORBALC_0_0,WAIT GO BACK OUT HERE BOY.,CZEKAJ WROĆ TU CHŁOPCZE
+LIVINGDOORROOM_0_0,"BOY, GO IN HERE.","CHŁOPCZE, CHODŹ TUTAJ."
+LIVINGDOORHALL_0_0,"WHAT IS DOWN HERE. PROCEED, BOY.","CO TAM JEST NA DOLE. IDŹ DALEJ, CHŁOPCZE."
+LIVINGDOORKITCHEN_0_0,THIS WAY. THROUGH THE DOORS LIKE YOU SEE IN A COWBOY SALOON.,TĘDY. PRZEZ DRZWI JAK W KOWBOJSKIM SZYNKU.
+LIVINGDOORSTUDY_0_0,HERE BOY. IN HERE.,TUTAJ CHŁOPCZE. TUTAJ.
+STUDYDOOR_0_0,RETURN TO THE LARGE ROOM WITH THE GROSS PAINTINGS.,WRÓĆ DO DUŻEGO POKOJU Z OBRZYDLIWYMI MALOWIDŁAMI.
+ROOMDOOR_0_0,GO OUT OF THE DOOR THAT IS NOT HERE.,WYJDŹ PRZEZ DRZWI KTÓRYCH TUTAJ NIE MA.
+HALLDOORBATH_0_0,GO IN THERE NOW.,TERAZ IDŹ TAM.
+HALLARROW_0_0,NO GO BACK.,"NIE, WRÓĆ."
+BATHARROW_0_0,LEAVE AT ONCE.,WYJDŹ NATYCHMIAST.
+KITCHARROW_0_0,RETURN TO THE ROOM WITH THE DEAD HAG'S REMAINS.,WRÓĆ DO POKOJU Z PROCHAMI STAREJ WIEDŹMY.
+KITCHDOOR_0_0,OPEN THIS DOOR NOW.,OTWÓRZ TERAZ TE DRZWI.
+UTILARROW_0_0,GO BACK INTO THE LUNCHEON PARLOR.,WRÓĆ DO SALI OBIADOWEJ.
+LIVINGCRUX_0_0,"MOVE THIS ABSURD EDIFICE AND EXIT YOUR HOUSE, BOY.","PRZESUŃ TO ABSURDALNE UZRADZENIE I WYJDŹ ZE SWEGO DOMU, CHŁOPCZE."
+LIVINGCRUX_0_1,"This thing weighs a ton! You'd honestly be surprised if the game cursor could lift it, or at least not without a significant expense of GRIST.
+
+Of all the places for Rose to drop the infernal thing. More than ever you feel... what's the word you're looking for?
+
+Of course. Housetrapped.","Ta rzecz waży tonę! Byłbyś naprawdę zaskoczony, gdyby kursor był w stanie ją podnieść, a przynajmniej bez znaczącego wydatku BUDULCA.
+
+Ze wszystkich miejsc, gdzie Rose mogła upuścić tę diabelną rzecz. Bardziej, niż kiedykolwiek czujesz się... jak chcesz to ująć?
+
+Oczywiście. Uwięziony w domu."
+UTILDOOR_0_0,"EXIT, BOY.","WYJDŹ, CHŁOPCZE."
+OUTSIDEDOOR_0_0,BACK INTO THE HOUSE WITH YOU.,WRÓĆ DO DOMU.
+KITCHDRAWING_0_0,EXAMINE THIS ARTWORK.,ZBADAJ TO DZIEŁO MALARSKIE.
+KITCHDRAWING_0_1,"Your DAD was so proud when you drew this. He hung it up immediately and it's stayed there ever since.
+
+That was one week ago.","Twój TATA był tak dumny, gdy to narysowałeś. Powiesił to tu
+natychmiast i tak zostało od tamtej pory.
+
+Było to tydzień temu."
+KSPRITE_0_0,WHAT'S THAT,CO TO
+KSPRITE_0_1,"It looks different now. 
+
+After you bit that APPLE, your whole house seemed to be trasported somewhere. Then the APPLE disappeared and the KERNELSPRITE underwent a transformation. Aside from the change in appearance, the transformation doesn't seem to have any relevant ramifications. 
+
+You still can't understand a word this idiot says.","Wygląda teraz inaczej.
+
+Zdaje się, że cały twój dom został gdzieś przeniesiony po tym, jak ugryzłeś tamto JABŁKO. Potem JABŁKO zniknęło i KERNELSPRITE
+przeszedł transformację. Pomijając zmianę w wyglądzie, transformacja zdaje się nie mieć żadnych istotnych konsekwencji.
+
+Nadal nie rozumiesz słowa z tego, co gada ten idiota."
+LIVINGDOLLS_0_0,DESTROY THESE DIMINUTIVE SOLDIERS OF MERRIMENT.,ZNISZCZ TE MAŁE WESOŁE ŻOŁNIERZYKI.
+LIVINGDOLLS_0_1,"It hardly seems worth it to go to the bother. 
+
+You doubt you could get much for them at a garage sale even. Maybe a grubby palm of pennies and a kick in the nuts for the whole lot of 'em.","Zdaje się to ledwo warte fatygi.
+
+Wątpisz, że mógłbyś uzyskać za nie wiele nawet na garażowej
+wyprzedaży. Może brudną garść drobniaków i kopniaka w jaja za nie wszystkie
+razem."
+LIVINGPOKERS_0_0,WIELD THESE INSTRUMENTS OF COMBAT.,POSŁUŻ SIĘ TYMI NARZĘDZIAMI WALKI.
+LIVINGPOKERS_0_1,Any one of these things would make a fine weapon. If only your STRIFE SPECIBUS wasn't already allocated. Oh well.,Każda z tych rzeczy mogłaby posłużyć za fajną broń. Gdyby tylko twój TYP BRONI nie został już przyporządkowany. No cóż.
+LIVINGURN_0_0,TOPPLE THIS URN IMMEDIATELY.,WYWRÓĆ TĘ URNĘ NATYCHMIAST.
+LIVINGURN_0_1,"That would be disrespectful to your NANNA! You just won't do it!! Or not intentionally at least!!!
+
+You consider that it is fortunate she is no longer around to witness this sorrow. On the other hand, you would probably benefit from her elderly wisdom now...","To byłby brak szacunku dla twojej BABCI! Nie zrobisz tego!! A przynajmniej nie specjalnie!!!
+
+Uważasz, że to szczęście, że już jej tu nie ma, aby doświadczyć tego smutku. Z drugiej strony, prawdopodobnie skorzystałbyś teraz z jej mądrości..."
+LIVINGSOOT_0_0,"STOW LUMP OF SOOT FOR FUTURE USE, BOY.","SCHOWAJ GRUDKĘ SADZY W CELU PRZYSZŁEGO UŻYTKU, CHŁOPCZE."
+LIVINGSOOT_0_1,"That stuff is really dirty and you don't want it!
+
+Besides, you have it on good authority that a significant portion of it is comprised of asbestos.","To jest strasznie brudne i nie chcesz tego!
+
+Poza tym wiesz z pewnego źródła, że znaczna część tego jest
+złożona z azbestu."
+LIVINGLID_0_0,USE THIS TO RESEAL THAT OPENING THERE.,UŻYJ TEGO BY ZAPIECZĘTOWAĆ Z POWROTEM TEN OTWÓR TUTAJ.
+LIVINGLID_0_1,"If only putting the lid back on the CRUXTRUDER would undo all it's done. Alas, Pandora's Tube has been opened.","Gdyby tylko założenie z powrotem wieka na WYSEDNIARKĘ mogło odczynić wszystko, co zrobiła. Niestety, Tuba Pandory została otwarta."
+LIVINGPIE_0_0,A SMALL DESSERT TRAY? USELESS.,MAŁA TACKA DESEROWA? BEZUŻYTECZNE.
+LIVINGPIE_0_1,"In retrospect, it was pretty funny when your DAD pied you like that. Gotcha'd again by the old man!","Z perspektywy czasu, to było całkiem zabawne, gdy twój TATA obrzucił
+cię ciastem w ten sposób. Twój staruszek znowu cię załatwił!"
+LIVINGLAMP_0_0,WHY DOES THIS SMALL MAN STAND HERE?,DLACZEGO TEN MAŁY CZŁOWIEK TUTAJ STOI?
+LIVINGLAMP_0_1,"This HARLEQUIN is always ready to serve you with illumination, whether you're reading a book, or just enjoying a nice pipe.","Ten HARLEKIN zawsze służy ci oświetleniem,
+czy czytasz książkę, czy tylko rozkoszujesz się dobrą fajką."
+LIVINGQUIN4_0_0,"UGH, NO.","UHH, NIE."
+LIVINGQUIN4_0_1,So coy. So mysterious.,Taki wstydliwy. Taki tajemniczy.
+LIVINGQUIN3_0_0,VILE. PAY NO MIND TO THIS FILTH.,OBRZYDLIWE. NIE ZWRACAJ UWAGI NA TEN BRUD.
+LIVINGQUIN3_0_1,"What is he even doing there? Playing with a ball or something?
+
+Clowns are stupid.","Co on tu w ogóle robi? Bawi się piłką, czy coś?
+
+Klauny są głupie."
+LIVINGHEAD_0_0,WHAT IS THE MEANING OF THIS RUBBISH.,CO MA ZNACZYĆ TEN ŚMIEĆ.
+LIVINGHEAD_0_1,"Ok, even YOU have to admit. This one's pretty funny!
+
+hehehehe!","Dobra, nawet TY musisz to przyznać. Ten jest całkiem zabawny!
+
+hehehehe!"
+VAULT01_0_0,SHENANIGANS,SZTUCZKI
+PSSAFE_0_0,Retrieve arms from safe.,Odzyskaj ręce z sejfu
+PSSAFE_0_1,You already HAVE arms stupid!,"Już MASZ ręce, głupku!"
+PSSAFE_1_0,Shoot safe,Strzel w sejf
+PSSAFE_1_1,With what?,Niby czym?
+PSSAFE_2_0,Open safe,Otwórz sejf
+PSDESK_0_0,Make desk into fort and visit IMAGINATION LAND!,Stwórz z biurka fort i odwiedź KRAINĘ WYOBRAŹNI!
+PSDESK_0_1,"Wow...
+
+...So like... Where can I get some of YOUR drugs?","Wow...
+
+A więc... Gdzie mogę nabyć trochę TWOICH dragów?"
+PSWINDOW_0_0,Unplug window,Odłącz okno
+PSWINDOW_0_1,...It's a window...,...To jest okno...
+PSWINDOW_1_0,Pick up window,Podnieś okno
+PSWINDOW_1_1,That is so infeasable it hurts me.,"To jest tak nierealne, że aż boli"
+PSPUMPKIN_0_0,"WOAH, WHAT? THIS IS THE PUMPKIN? HOLYSHITHOLYSHITHOLYSHIT!!!!!!1111","ŁAŁ, CO? TO JEST DYNIA? OKURDEOKURDEOKURDE!!!!!!1111"
+PSPUMPKIN_0_1,"No it's pumpkin shaped graffiti...
+
+GAME DEV FACTS:
+ All Elements (but the pumpkin] drawn by Andrew Hussie in Photoshop, imported and subsequently vectorized, organized, named, and scripted by Alexis 'Gankro' Beingessner... Who is a guy...
+148 Objects, 538 lines, 140 bitmaps, 9 souls, 2 pumpkins, This line of code is 16732 characters...","Nie, to graffiti w kształcie dyni...
+
+GAME DEV FACTS: 
+Wszystkie elementy (z wyjątkiem dyni] narysowane w Photoshopie przez Andrew Hussiego, zaimporotwane i kolejno zwektorowane,
+przeorganizowane, nazwane i opisane przez Alexis ""Gankro""
+Beingessner... Ktory jest facetem...
+148 obiektow, 538 linii, 140 map bitowych, 9 dusz, 2 dynie.
+Ta linia kodu ma 17151 znaki..."
+IDIOT_MESSAGE_0,Die. Now. Please.,Umrzyj. Teraz. Proszę.
+IDIOT_MESSAGE_1,That doesn't even start to make sense.,To nawet nie zaczyna mieć sensu.
+IDIOT_MESSAGE_2,My dick. Suck it.,Mój penis. Ssij go.
+IDIOT_MESSAGE_3,"So like, you ate a lot of lead as a child?",A więc postrzelono cię za dzieciaka?
+IDIOT_MESSAGE_4,"Okay, I'll get right on that Professor Stoopid.","Dobra, zajmę się tym natychmiast Profesorze Goopku."
+IDIOT_MESSAGE_5,'You shouldn't drink while you're pregnant.' Tell your mother this,"""Nie powinnaś pić będąc w ciąży."" Powiedz to swojej mamie"

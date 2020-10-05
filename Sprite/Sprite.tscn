@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/SpriteSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprite/Scripts/Sprite.gd" type="Script" id=2]
+
+
+[node name="Sprite" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SpriteSprite" parent="." instance=ExtResource( 1 )]
+position = Vector2( -114, -390 )
