@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://test_word_break.gd" type="Script" id=1]
-[ext_resource path="res://Themes And Styles/vectorFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Themes And Styles/DialogBoxFont.tres" type="DynamicFont" id=2]
+
 
 
 

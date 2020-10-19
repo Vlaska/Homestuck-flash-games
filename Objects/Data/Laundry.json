@@ -1,0 +1,84 @@
+{
+    "room_name": "laundry",
+    "objects": {
+        "outsideDoor": {
+            "offset": [0, 0],
+            "pos": [264.8, -322.65],
+            "sprite": "res://Objects/Graphics/Laundry/294.png",
+            "prompts": [{
+              "action": "change_scene",
+              "scene": "outside",
+              "spawn": "door",
+              "id": "UTILDOOR_0"
+            }],
+            "collisions": [
+                [121.289978, 35.49519],
+                [-0.202682, -1.322982],
+                [-0.086761, 338.803162],
+                [120.443954, 376.99115]
+            ]
+        },
+        "washers": {
+            "offset": [0, -244.35],
+            "pos": [-151.4, 103.65],
+            "sprite": "res://Objects/Graphics/Laundry/296.png",
+            "prompts": [{
+              "action": "dialog",
+              "id": "UTILWASHER_0",
+              "num_of_pages": 1
+            }],
+            "collisions": [
+                [260.279785, -3.820526],
+                [-3.132172, 85.010643],
+                [-0.347214, 317.904877],
+                [110.424011, 365.064667],
+                [355.850098, 248.384842],
+                [354.020813, 72.054367],
+                [282.27356, 35.668148]
+            ]
+        },
+        "cabinets": {
+            "offset": [0, -385.3],
+            "pos": [468.5, 162.55],
+            "sprite": "res://Objects/Graphics/Laundry/298.png",
+            "prompts": [{
+              "action": "dialog",
+              "id": "UTILCABINET_0",
+              "num_of_pages": 1
+            }],
+            "collisions": [
+                [93.454346, -1.937721],
+                [2.804863, 37.497623],
+                [-0.233154, 216.315979],
+                [4.035095, 219.771652],
+                [-1.655899, 392.618225],
+                [137.163818, 450.348328],
+                [233.097839, 398.716492],
+                [229.642578, 42.700432]
+            ]
+        },
+        "arrow": {
+            "offset": [53.5, 0],
+            "pos": [4.8, 296.65],
+            "sprite": "res://Objects/Graphics/arrowLeftDown.png",
+            "prompts": [{
+              "action": "change_scene",
+              "scene": "kitchen",
+              "spawn": "laundryRoom",
+              "id": "UTILARROW_0",
+            }],
+            "collisions": [
+                [0.548096, 2.927593],
+                [-1.789276, 59.438023],
+                [74.48027, 60.606857],
+                [81.644829, 38.907257],
+                [80.730209, 19.901049],
+                [37.013172, -1.151321]
+            ]
+        }
+    },
+    "spawns": {
+        "outside": [],
+        "kitchen": []
+    }
+}

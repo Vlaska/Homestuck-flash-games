@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objects/ObjectBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/collisions.gd" type="Script" id=2]
+
+[node name="ClickableObject" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+room_data_path = "res://Objects/Data/Balcony.json"
+
+[node name="Shape" parent="CollisionArea" index="0"]
+position = Vector2( 1, 0 )

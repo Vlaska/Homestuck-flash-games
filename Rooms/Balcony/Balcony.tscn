@@ -1,57 +1,57 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Rooms/Balcony/112.png" type="Texture" id=2]
-[ext_resource path="res://Rooms/Balcony/118.png" type="Texture" id=3]
-[ext_resource path="res://Rooms/Balcony/110.png" type="Texture" id=4]
-[ext_resource path="res://Rooms/Balcony/116.png" type="Texture" id=5]
-[ext_resource path="res://Rooms/Balcony/114.png" type="Texture" id=6]
+[ext_resource path="res://Objects/Graphics/Balcony/112.png" type="Texture" id=2]
+[ext_resource path="res://Objects/Graphics/Balcony/118.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Graphics/Balcony/110.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Graphics/Balcony/116.png" type="Texture" id=5]
+[ext_resource path="res://Objects/Graphics/Balcony/114.png" type="Texture" id=6]
 [ext_resource path="res://Rooms/Balcony/109.png" type="Texture" id=7]
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 cameraHorizontalLimits = Vector2( -232, 1559 )
+objects_data_path = "res://Objects/Data/Balcony.json"
+room_name = "balcony"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
-position = Vector2( 0, -0.749161 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
-position = Vector2( 0, 0.749161 )
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="0"]
 polygon = PoolVector2Array( 259.083, 116.562, -6.60312, 257.359, 161.911, 337.206, 385.232, 443.039, 558.629, 529.029, 620.05, 564.622, 839.6, 448.698, 1336.39, 208.27, 1054.88, 80.4761, 1131.4, 47.5261, 1394.35, 206.347, 611.857, 594.408, -35.4117, 260.66, 250.39, 96.9703 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
-position = Vector2( 0, 0.749161 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="1"]
 polygon = PoolVector2Array( 248.911, 121.869, 305.263, 85.3591, 1066.03, 86.5496, 659.254, 300.849, 644.967, 307.992, 634.649, 307.595 )
 
-[node name="Background" type="Sprite" parent="." index="2"]
+[node name="Background" parent="." index="2"]
 texture = ExtResource( 7 )
-centered = false
 offset = Vector2( -282.2, -739.85 )
 
-[node name="Objects" type="YSort" parent="." index="3"]
+[node name="Objects-old" type="YSort" parent="." index="3"]
 
-[node name="Floor" type="Sprite" parent="Objects" index="0"]
+[node name="Floor" type="Sprite" parent="Objects-old" index="0"]
 visible = false
 position = Vector2( 0, -0.749161 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( -6.1, 86.95 )
 
-[node name="Alchemiter" type="Sprite" parent="Objects" index="1"]
+[node name="Alchemiter" type="Sprite" parent="Objects-old" index="1"]
+visible = false
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( 155.05, -530.75 )
 
-[node name="Totem" type="Sprite" parent="Objects" index="2"]
+[node name="Totem" type="Sprite" parent="Objects-old" index="2"]
+visible = false
 texture = ExtResource( 6 )
 centered = false
 offset = Vector2( 322.05, -169.05 )
 
-[node name="Door" type="Sprite" parent="Objects" index="3"]
+[node name="Door" type="Sprite" parent="Objects-old" index="3"]
+visible = false
 texture = ExtResource( 4 )
 centered = false
 offset = Vector2( -8.2, -409.85 )
 
-[node name="Railing" type="Sprite" parent="Objects" index="4"]
+[node name="Railing" type="Sprite" parent="Objects-old" index="4"]
+visible = false
 position = Vector2( -90.5, 618.7 )
 texture = ExtResource( 5 )
 centered = false

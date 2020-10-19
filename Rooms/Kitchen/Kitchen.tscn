@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/Kitchen/291.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/Kitchen/271.png" type="Texture" id=3]
+[ext_resource path="res://Objects/Graphics/Kitchen/280.png" type="Texture" id=4]
+
+[node name="RoomBase" instance=ExtResource( 1 )]
+objects_data_path = "res://Objects/Data/Kitchen.json"
+room_name = "kitchen"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="0"]
+polygon = PoolVector2Array( 413.419, 38.126, 706.892, 141.977, 684.608, 156.692, 672.375, 169.5, 669.625, 177.75, 673.125, 183.125, 923.423, 301.327, 507.179, 514.494, 482.373, 522.482, 453.362, 527.107, 413.419, 523.744, 379.363, 510.289, 348.25, 492.63, 312.512, 461.097, 288.126, 426.62, 163.673, 371.541, 44.6863, 311.838, -121.811, 226.487, 127.935, 114.648, 138.026, 135.67, 151.06, 154.59, 170.4, 165.101, 186.377, 165.942, 206.186, 159.363, 221.322, 150.324, 228.843, 141.977, 232.627, 126, 228.843, 108.341, 220.854, 96.9887, 304.523, 54.103, 304.103, 34.7624, -157.97, 218.498, 427.948, 582.085, 949.07, 305.531, 727.074, 128.943, 406.272, 13.7401 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="1"]
+polygon = PoolVector2Array( 293.639, 47.9445, 304.15, 54.4615, 324.962, 64.5522, 337.786, 68.5465, 352.712, 68.7567, 372.683, 60.1375, 427.762, 34.4902 )
+
+[node name="Background" parent="." index="2"]
+position = Vector2( -418.4, -409.3 )
+texture = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="Objects" index="0"]
+position = Vector2( -43.6, 551.65 )
+
+[node name="280" type="Sprite" parent="Objects/Node2D" index="0"]
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -218.1, -446.7 )
+
+[node name="291" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( -367.1, 63.15 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 7.1, -24 )

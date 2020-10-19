@@ -1,0 +1,77 @@
+{
+    "room_name": "bathroomCorridor",
+    "objects": {
+        "rightDoor": {
+            "offset": [-27.35, -87.1],
+            "pos": [431.95, -113.45],
+            "sprite": "res://Objects/Graphics/BathroomCorridor/167.png",
+            "prompts": [{
+                "action":"dialog",
+                "id": "HALLDOORDAD_0",
+                "num_of_pages": 1
+            }],
+            "collisions": [
+                [53.81044, -0.515251],
+                [-0.914627, 33.136169],
+                [1.371948, 474.642975],
+                [54.076248, 575.002502]
+            ]
+        },
+        "leftDoor": {
+            "offset": [-1.3, -140],
+            "pos": [63.9, -59.55],
+            "sprite": "res://Objects/Graphics/BathroomCorridor/169.png",
+            "prompts": [{
+                "action": "change_scene",
+                "scene": "bathroom",
+                "spawn": "entrance",
+                "id": "HALLDOORBATH_0"
+            }],
+            "collisions": [
+                [0.005066, -1.21452],
+                [55.085815, 32.224209],
+                [52.240311, 476.602203],
+                [-1.31604, 574.016663]
+            ]
+        },
+        "photo": {
+            "offset": [0, 0],
+            "pos": [191.75, -54.25],
+            "sprite": "res://Objects/Graphics/BathroomCorridor/172.png",
+            "prompts": [{
+                "action": "dialog",
+                "id": "HALLPIC_0",
+                "num_of_pages": 1
+            }],
+            "collisions": [
+                [-0.456261, -0.495651],
+                [139.151062, -0.495651],
+                [138.897003, 157.398712],
+                [-0.329231, 157.398712]
+            ]
+        },
+        "arrow": {
+            "offset": [53.5, 0],
+            "pos": [345.45, 452.2],
+            "sprite": "res://Objects/Graphics/arrowRightDown.png",
+            "prompts": [{
+                "action": "change_scene",
+                "scene": "mainRoom",
+                "spawn": "bathroomCorridorEntrance",
+                "id": "HALLARROW_0"
+            }],
+            "collisions": [
+                [-1.001202, 39.257278],
+                [-0.95039, 20.962536],
+                [42.900791, -0.07642],
+                [79.841476, 3.785803],
+                [81.060959, 59.07658],
+                [6.264984, 60.193634]
+            ]
+        }
+    },
+    "spawns": {
+        "leftDoor": [],
+        "arrow": []
+    }
+}

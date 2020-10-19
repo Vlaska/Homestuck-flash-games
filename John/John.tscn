@@ -9,6 +9,7 @@ height = 41.9531
 
 [node name="John" type="KinematicBody2D"]
 position = Vector2( 0.264877, -0.264862 )
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="JohnSprite" parent="." instance=ExtResource( 1 )]

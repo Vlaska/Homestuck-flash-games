@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/JohnsRoom/134.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/JohnsRoom/164.png" type="Texture" id=3]
+
+[node name="RoomBase" instance=ExtResource( 1 )]
+objects_data_path = "res://Objects/Data/JohnsRoom.json"
+room_name = "johnsRoom"
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="0"]
+polygon = PoolVector2Array( -357.645, 25.469, -352.291, 27.9889, -78.4152, 127.523, -62.1937, 130.042, -41.72, 127.208, 140.024, 35.8634, 314.995, 96.4971, 325.389, 98.8595, 340.824, 97.2845, 444.767, 52.7148, 1024.65, 283.438, 1029.21, 280.603, 439.441, 45.6856, 128.166, 31.7125 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="1"]
+polygon = PoolVector2Array( 1032.8, 276.375, 663.051, 481.381, 414.077, 366.429, 518.434, 313.986, 429.969, 249.888, 353.158, 280.613, 367.038, 308.673, 387.529, 340.3, 408.019, 363.686, 360.802, 340.969, 350.779, 338.296, 339.643, 339.187, 327.393, 344.309, 124.936, 449.658, -169.06, 300.21, -178.86, 297.537, -189.996, 297.76, -202.692, 302.66, -378.199, 387.295, -611.392, 285.065, -610.278, 282.837, -473.748, 210.897, -465.062, 202.434, -465.952, 195.307, -556.824, 142.075, -353.477, 27.8177, -345.013, 22.695, -575.979, 142.966, -617.628, 289.074, -358.467, 401.889, 136.091, 459.288, 680.706, 490.656, 1034.44, 287.093 )
+
+[node name="Background" parent="." index="2"]
+position = Vector2( -831.15, -457.35 )
+texture = ExtResource( 2 )
+
+[node name="164" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( -585.8, 43.85 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( -25, -16 )

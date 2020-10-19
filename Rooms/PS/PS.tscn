@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/PS/302.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/PS/310.png" type="Texture" id=3]
+
+[node name="RoomBase" instance=ExtResource( 1 )]
+objects_data_path = "res://Objects/Data/PS.json"
+room_name = "PS"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="0"]
+polygon = PoolVector2Array( 452.888, 302.728, 510.069, 331.318, 693.385, 416.669, 864.507, 359.068 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="1"]
+polygon = PoolVector2Array( 843.627, 362.28, 1012.84, 415.317, 446.557, 655.243, -78.475, 421.771, 462.832, 305.315, 460.868, 298.019, -93.0671, 420.929, 452.73, 665.064, 1025.19, 416.158, 842.786, 357.79 )
+
+[node name="Background" parent="." index="2"]
+position = Vector2( -128, -239.4 )
+texture = ExtResource( 2 )
+
+[node name="310" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( -80.05, 299.85 )
+scale = Vector2( 2.973, 2.975 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( 0, 1.35 )

@@ -169,3 +169,6 @@ flash/
 *.swf
 
 Resources/
+Export/
+Virtual-Joystick-Godot-master/
+android/

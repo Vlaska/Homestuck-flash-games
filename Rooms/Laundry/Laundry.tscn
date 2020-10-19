@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/Laundry/293.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/Laundry/300.png" type="Texture" id=3]
+
+[node name="RoomBase" instance=ExtResource( 1 )]
+objects_data_path = "res://Objects/Data/Laundry.json"
+room_name = "laundry"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="0"]
+polygon = PoolVector2Array( 230.837, -4.58055, 422, 60.5, 557.25, 111.5, 493.559, 142.512, 468.865, 159.069, 467.182, 166.084, 622.081, 235.677, 301.338, 393.383, -52.2378, 229.503, 203.561, 105.308, 203.738, 100.712, 200.175, 94.6193, 173.992, 76.8756, 153.153, 65.628, 129.434, 52.8992, -80.5, 245, 306, 416.5, 651, 236.5, 571, 98.5, 228, -19.5, 216.5, -13.5 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="1"]
+polygon = PoolVector2Array( 133.01, 57.4019, 166.912, 29.1937, 199.623, 10.3883, 235.778, -5.23882, 173.228, 8.1247 )
+
+[node name="Background" parent="." index="2"]
+position = Vector2( -221.2, -420.65 )
+texture = ExtResource( 2 )
+
+[node name="300" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( -39.2, 1 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( -12, -4 )

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Rooms/StudyRoom/269.png" type="Texture" id=2]
+[ext_resource path="res://Rooms/StudyRoom/246.png" type="Texture" id=3]
+
+[node name="RoomBase" instance=ExtResource( 1 )]
+objects_data_path = "res://Objects/Data/StudyRoom.json"
+room_name = "studyRoom"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="0"]
+polygon = PoolVector2Array( 548.961, 560.847, 220.492, 392.365, 206.806, 389.533, 190.288, 395.669, 5.28912, 488.168, -363.766, 325.822, 37.8528, 143.654, 136.488, 180.465, 152.062, 184.241, 171.411, 180.465, 374.344, 84.1902, 805.695, 231.907, 678.272, 310.72, 675.44, 327.71, 683.935, 340.452, 834.009, 413.058, 842.884, 418.082, 814.261, 222.212, 366.646, 72.2184, 23.5335, 132.151, -378.013, 323.934, 10.0489, 500.734, 581.653, 577.148 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="1"]
+polygon = PoolVector2Array( 549.127, 568.233, 548.378, 559.617, 840.173, 409.787, 851.785, 421.773 )
+
+[node name="Background" parent="." index="2"]
+position = Vector2( -409, -347.35 )
+texture = ExtResource( 3 )
+
+[node name="269" type="Sprite" parent="." index="4"]
+visible = false
+position = Vector2( -335.2, 100.2 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( -30.7, -14.15 )

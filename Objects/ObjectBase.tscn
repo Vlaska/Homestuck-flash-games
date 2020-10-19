@@ -2,11 +2,15 @@
 
 [ext_resource path="res://Objects/ObjectBase.gd" type="Script" id=1]
 
-
-
-[node name="ClickableObjectBase" type="TextureButton"]
+[node name="ClickableObject" type="Sprite"]
+centered = false
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="." to="." method="button_pressed"]
+
+[node name="CollisionArea" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 4
+collision_mask = 8
+
+[node name="Shape" type="CollisionPolygon2D" parent="CollisionArea"]
+[connection signal="mouse_entered" from="CollisionArea" to="." method="_on_CollisionArea_mouse_entered"]
+[connection signal="mouse_exited" from="CollisionArea" to="." method="_on_CollisionArea_mouse_exited"]

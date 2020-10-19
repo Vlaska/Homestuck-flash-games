@@ -13,12 +13,14 @@ onready var spriteAnimationPlayer = $JohnSprite/AnimationPlayer
 onready var spriteAnimationTree = $JohnSprite/AnimationTree
 onready var spriteAnimationState = spriteAnimationTree.get("parameters/State/playback")
 
+var trickster_mode_active = false
+
 var _scale = 1
 
 
 func _ready():
 	spriteAnimationTree.active = true
-	get_node("/root/MainScene/UpdateTimer").connect("timeout", self, "update")
+	UpdateTimer.connect("timeout", self, "update")
 
 
 func update():
@@ -35,6 +37,10 @@ func move_state(_delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 
+	if Input.is_action_just_pressed("trickster_mode_toggle"):
+		self.trickster_mode_active = not self.trickster_mode_active
+		self.change_character_state()
+
 	if input_vector != Vector2.ZERO:
 		var h_direction_sign = sign(input_vector.x)
 		var v_direction_sign = sign(input_vector.y)
@@ -50,7 +56,6 @@ func move_state(_delta):
 			if h_direction_sign != prevHFacingDirection:
 				prevHFacingDirection = h_direction_sign
 				sprite.scale.x *= -1
-				emit_signal("flip_sprite")
 		
 		vel += (input_vector * spd / _delta) / (3.5 * _scale)
 		
@@ -67,3 +72,11 @@ func move_state(_delta):
 func change_parent(new_parent):
 	get_parent().call_deferred("remove_child", self)
 	new_parent.call_deferred("add_child", self)
+
+func change_character_state():
+	if trickster_mode_active:
+		self.set_collision_layer_bit(0, false)
+		self.set_collision_layer_bit(19, true)
+	else:
+		self.set_collision_layer_bit(0, true)
+		self.set_collision_layer_bit(19, false)

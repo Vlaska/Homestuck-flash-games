@@ -1,0 +1,47 @@
+{
+    "room_name": "test",
+    "objects": {
+        "safe": {
+            "pos": [
+                102,
+                103
+            ],
+            "sprite": "path/to/sprite.png",
+            "prompts": [
+                {
+                    "sequence": {
+                        "PSSAFE_0": {
+                            "action": "dialog",
+                            "num_of_pages": 4,
+                            "next": "PSSAFE_1"
+                        },
+                        "PSSAFE_1": {
+                            "action": "dialog",
+                            "num_of_pages": 1,
+                            "next": "PSSAFE_0"
+                        }
+                    },
+                    "first": "PSSAFE_0"
+                },
+                {
+                    "action": "splashscreen",
+                    "path": "path/to/splashscreen.png",
+                    "num_of_pages": 0,
+                    "id": "PSSAFE_4"
+                },
+                {
+                    "action": "splashscreen",
+                    "path": "path/to/splashscreen_1.png",
+                    "num_of_pages": 1,
+                    "id": "PSSAFE_5"
+                },
+                {
+                    "action": "change_scene",
+                    "scene": "path/to/scene.tscn",
+                    "spawn": "name_of_spawn_point",
+                    "id": "PSSAFE_3"
+                }
+            ]
+        }
+    }
+}

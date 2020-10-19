@@ -2,6 +2,7 @@ extends Node2D
 
 
 onready var john = $"../John"
+# onready var john = get_parent()
 onready var spriteSprite = $SpriteSprite/AnimationPlayer
 
 
@@ -17,7 +18,7 @@ var prevHFacingDirection = 1 # 1 right, -1 left
 
 
 func _ready():
-	get_node("/root/MainScene/UpdateTimer").connect("timeout", self, "update")
+	UpdateTimer.connect("timeout", self, "update")
 
 
 func update():
