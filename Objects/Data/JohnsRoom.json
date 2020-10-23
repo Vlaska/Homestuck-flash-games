@@ -142,7 +142,7 @@
             "sprite": "res://Objects/Graphics/JohnsRoom/149.png",
             "prompts": [{
                 "action": "change_scene",
-                "scene": "mainRoom",
+                "scene": "livingRoom",
                 "spawn": "johnsRoom",
                 "id": "ROOMDOOR_0"
             }],
@@ -319,6 +319,6 @@
         }
     },
     "spawns": {
-        "doorframe": []
+        "johnsRoom": [-360, 250]
     }
 }

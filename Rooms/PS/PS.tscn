@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/PS/302.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/PS/310.png" type="Texture" id=3]
+[ext_resource path="res://Rooms/ChangeCameraFollowTarget.tscn" type="PackedScene" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 446.511, 654.907, -78.7055, 421.743, 459.852, 306.056, 693.728, 417.072, 850.105, 364.179, 1012.87, 415.487 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3 ) ]
+outlines = [ PoolVector2Array( 459.852, 306.056, 693.728, 417.072, 850.105, 364.179, 1012.87, 415.487, 446.511, 654.907, -78.7055, 421.743 ) ]
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 objects_data_path = "res://Objects/Data/PS.json"
@@ -14,14 +20,25 @@ polygon = PoolVector2Array( 452.888, 302.728, 510.069, 331.318, 693.385, 416.669
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="1"]
 polygon = PoolVector2Array( 843.627, 362.28, 1012.84, 415.317, 446.557, 655.243, -78.475, 421.771, 462.832, 305.315, 460.868, 298.019, -93.0671, 420.929, 452.73, 665.064, 1025.19, 416.158, 842.786, 357.79 )
 
-[node name="Background" parent="." index="2"]
+[node name="Background" parent="." index="1"]
 position = Vector2( -128, -239.4 )
 texture = ExtResource( 2 )
 
-[node name="310" type="Sprite" parent="." index="4"]
+[node name="310" type="Sprite" parent="." index="3"]
 visible = false
 position = Vector2( -80.05, 299.85 )
 scale = Vector2( 2.973, 2.975 )
 texture = ExtResource( 3 )
 centered = false
 offset = Vector2( 0, 1.35 )
+
+[node name="ChangeCameraFollowTarget" parent="." index="4" instance=ExtResource( 4 )]
+position_to_follow = Vector2( 900, 245 )
+
+[node name="CollisionPolygon2D" parent="ChangeCameraFollowTarget" index="0"]
+polygon = PoolVector2Array( 850, 360.5, 692.6, 416.331, 850.5, 491.5, 1025.5, 417 )
+
+[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
+navpoly = SubResource( 1 )
+
+[editable path="ChangeCameraFollowTarget"]

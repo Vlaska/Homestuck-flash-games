@@ -2,6 +2,7 @@ extends Sprite
 
 
 const DialogSelect = preload("res://Dialog/DialogSelect.tscn")
+onready var world = get_node("/root/MainScene")
 var prompts: Array
 var mouse_in_area = false
 var dialog_state
@@ -51,7 +52,7 @@ func open_dialog_select():
 	# 	print(self.get_name())
 	var hud = get_node("/root/MainScene/Hud")
 	var dialogSelect = DialogSelect.instance()
-	var pos = hud.get_local_mouse_position()
+	var pos = world.get_local_mouse_position()
 	hud.add_child(dialogSelect)
 	dialogSelect.init(self.dialog_state, prompts, pos)
 
@@ -63,7 +64,9 @@ func _input(event: InputEvent):
 
 func _on_CollisionArea_mouse_entered():
 	mouse_in_area = true
-
-
+	print("mouse in")
+	
+	
 func _on_CollisionArea_mouse_exited():
 	mouse_in_area = false
+	print("mouse out")

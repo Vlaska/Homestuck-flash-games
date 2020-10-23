@@ -2,6 +2,5 @@
 
 [ext_resource path="res://Dialog/Scripts/DialogController.gd" type="Script" id=1]
 
-
 [node name="DialogController" type="Node"]
 script = ExtResource( 1 )

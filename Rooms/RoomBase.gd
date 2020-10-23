@@ -12,6 +12,7 @@ var ObjectBase = preload("res://Objects/ObjectBase.tscn")
 onready var object_container = $Objects
 onready var world_state = get_node("/root/MainScene").world_state
 var objects_data
+var spawns = {}
 
 
 func vecFromArray(arr: Array) -> Vector2:
@@ -78,3 +79,9 @@ func create_objects(data: Dictionary):
 
 func _on_RoomBase_ready():
 	DialogController.set_objects_parent(object_container)
+
+
+func _unhandled_input(event: InputEvent):
+	if event is InputEventMouseButton:
+		print("Room: ", event)
+

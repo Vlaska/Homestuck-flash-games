@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/BathroomCorridor/166.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/BathroomCorridor/173.png" type="Texture" id=3]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 159.925, 207.713, 362.827, 208.604, 538.334, 524.873, -16.4732, 524.428 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 159.925, 207.713, 362.827, 208.604, 538.334, 524.873, -16.4732, 524.428 ) ]
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 objects_data_path = "res://Objects/Data/BathroomCorridor.json"
@@ -14,6 +19,10 @@ polygon = PoolVector2Array( -16.5687, 526.249, -15.9013, 522.745, 162.967, 206.3
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" index="1"]
 polygon = PoolVector2Array( -15.2339, 522.578, 535.221, 525.581, 362.424, 208.11, 161.966, 206.554, 155.792, 204.051, 366.697, 206.387, 542.896, 526.582, 536.556, 528.084, -21.4075, 529.586 )
 
+[node name="Background" parent="." index="1"]
+position = Vector2( -69.4, -333.55 )
+texture = ExtResource( 2 )
+
 [node name="173" type="Sprite" parent="." index="2"]
 visible = false
 position = Vector2( 35.991, 202.517 )
@@ -21,6 +30,5 @@ texture = ExtResource( 3 )
 centered = false
 offset = Vector2( -51.1, 4.3 )
 
-[node name="Background" parent="." index="3"]
-position = Vector2( -69.4, -333.55 )
-texture = ExtResource( 2 )
+[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
+navpoly = SubResource( 1 )

@@ -52,23 +52,9 @@ func _input(event: InputEvent):
 	if not active:
 		return
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		print("DialogController: ", event)
 		var tmp = hud.get_node("DialogSelect")
-		# print(tmp)
 		print(tmp, " ", mouse_in_text_select)
 		if tmp and not mouse_in_text_select:
-			print(sprite_clicked)
 			hud.remove_child(tmp)
 			mouse_in_text_select = false
-# 		if dialog_box.mouse_in_dialog_box:
-# 			return
-# 		if check_player:
-# 			return
-# 		var objects = objects_parent.get_children()
-# 		objects.invert()
-# 		for i in objects:
-# 			if i.is_visible() and i.mouse_in_area:
-# 				i.open_dialog_select(event.position)
-# 				return
-	# elif event is InputEventScreenTouch and event.pressed:
-	# 	if OS.has_feature("JavaScript"):
-	# 		JavaScript.eval("console.log('Touch test')")

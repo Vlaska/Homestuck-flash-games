@@ -35,9 +35,8 @@
             "prompts": [{
               "action": "change_scene",
               "scene": "laundry",
-              "spawn": "kitchenDoor",
-              "id": "KITCHDOOR_0",
-              "num_of_pages": 1
+              "spawn": "kitchen",
+              "id": "KITCHDOOR_0"
             }],
             "collisions": [
                 [122.100266, 34.235046],
@@ -145,15 +144,14 @@
             "collisions": []
         },
         "arrow": {
-            "offset": [53.5, 0],
-            "pos": [766.2, 429.25],
+            "offset": [0, 0],
+            "pos": [630.6, 428.7],
             "sprite": "res://Objects/Graphics/arrowRightDown.png",
             "prompts": [{
               "action": "change_scene",
-              "scene": "mainRoom",
-              "spawn": "kitchenEntrance",
-              "id": "KITCHARROW_0",
-              "num_of_pages": 1
+              "scene": "livingRoom",
+              "spawn": "kitchen",
+              "id": "KITCHARROW_0"
             }],
             "collisions": [
                 [43.643745, -0.630081],
@@ -245,5 +243,8 @@
             ]
         }
     },
-    "spawns": {}
+    "spawns": {
+        "laundry": [400, 200],
+        "livingRoom": [600, 365]
+    }
 }

@@ -51,12 +51,12 @@
             ]
         },
         "arrow": {
-            "offset": [53.5, 0],
-            "pos": [345.45, 452.2],
+            "offset": [0, 0],
+            "pos": [219.6, 453.45],
             "sprite": "res://Objects/Graphics/arrowRightDown.png",
             "prompts": [{
                 "action": "change_scene",
-                "scene": "mainRoom",
+                "scene": "livingRoom",
                 "spawn": "bathroomCorridorEntrance",
                 "id": "HALLARROW_0"
             }],
@@ -71,7 +71,7 @@
         }
     },
     "spawns": {
-        "leftDoor": [],
-        "arrow": []
+        "leftDoor": [200, 305],
+        "arrow": [200, 305]
     }
 }

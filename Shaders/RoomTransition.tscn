@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Shaders/RoomTransition.gd" type="Script" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+
+uniform float progress: hint_range(0, 1);
+
+void fragment() {
+	COLOR.a *= progress;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/progress = 0.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "Empty"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "fade_in_finished"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.05, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "HideBg"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[node name="RoomTransition" type="ColorRect"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Empty"
+anims/Empty = SubResource( 3 )
+anims/FadeIn = SubResource( 4 )
+anims/FadeOut = SubResource( 5 )
+anims/HideBg = SubResource( 6 )

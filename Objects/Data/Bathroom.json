@@ -24,8 +24,8 @@
             ]
         },
         "exitArrow": {
-            "offset": [53.5, 0],
-            "pos": [603.55, 367.55],
+            "offset": [0, 0],
+            "pos": [469.2, 368.25],
             "sprite": "res://Objects/Graphics/arrowRightDown.png",
             "prompts": [{
                 "action": "change_scene",
@@ -129,6 +129,6 @@
         }
     },
     "spawns": {
-        "entrance": []
+        "entrance": [359, 300]
     }
 }

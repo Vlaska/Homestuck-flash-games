@@ -10,6 +10,7 @@ var playing: bool = false
 var mouse_in_dialog_box: bool = false
 var dialog_box_is_open: bool = false
 var closing_dialog_box: bool = false
+signal dialog_box_closed
 
 
 func _ready():
@@ -62,6 +63,7 @@ func dialog_box_is_closed():
 	self.visible = false
 	self.playing = false
 	self.closing_dialog_box = false
+	emit_signal("dialog_box_closed")
 
 
 func update():

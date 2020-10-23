@@ -131,7 +131,7 @@
             "sprite": "res://Objects/Graphics/StudyRoom/261.png",
             "prompts": [{
               "action": "change_scene",
-              "scene": "mainRoom",
+              "scene": "livingRoom",
               "spawn": "studyRoom",
               "id": "STUDYDOOR_0"
             }],
@@ -316,6 +316,6 @@
         }
     },
     "spawns": {
-        "entrance": []
+        "entrance": [-201, 355]
     }
 }

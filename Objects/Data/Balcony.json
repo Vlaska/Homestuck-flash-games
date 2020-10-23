@@ -7,7 +7,7 @@
             "sprite": "res://Objects/Graphics/Balcony/110.png",
             "prompts": [{
                 "action": "change_scene",
-                "scene": "mainRoom",
+                "scene": "livingRoom",
                 "spawn": "balconyDoor",
                 "id": "BALCDOOR_0"
             }],
@@ -106,7 +106,7 @@
         }
     },
     "spawns": {
-        "balconyDoor": [],
-        "gameStart": []
+        "balconyDoor": [160, 250],
+        "gameStart": [325, 225]
     }
 }

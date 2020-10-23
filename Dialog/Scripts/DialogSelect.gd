@@ -21,10 +21,12 @@ func _ready():
 
 
 func init(_dialog_state: Array, data: Array, _pos_in_hud: Vector2):
+	var camera_zoom = get_node("/root/MainScene/Camera").zoom
 	var viewport = get_viewport()
 	dialog_state = _dialog_state
 	pos_in_hud = self.get_global_mouse_position()
 	viewport_size = viewport.size
+	self.rect_scale = camera_zoom
 	self.rect_min_size = Vector2(viewport_size.x / 2, 0)
 	var max_text_width = int(viewport_size.x * 3 / 4)
 	mouse_position = viewport.get_mouse_position()
@@ -136,12 +138,12 @@ func openDialogBox(dialog_id: String, num_of_pages: int):
 	get_node("/root/MainScene/StaticHud/DialogBox").open_dialog_box(dialog_id, num_of_pages)
 
 
-func showSplashScreen():
-	pass
+func showSplashScreen(path, num_of_pages, dialog_id):
+	get_node("/root/MainScene/StaticHud/Splashscreen").show_splashscreen(path, dialog_id, num_of_pages)
 
 
-func changeScene():
-	pass
+func changeScene(room_name, spawn):
+	$"/root/MainScene".load_room(room_name, spawn)
 
 
 func on_hover_over_label_started(_meta):
@@ -183,9 +185,9 @@ func label_clicked(meta):
 			{"action": "dialog", "num_of_pages": var num_of_pages, "id": var dialog_id}:
 				openDialogBox(dialog_id, get_num_of_pages(num_of_pages))
 			{"action": "splashscreen", "path": var path, "num_of_pages": var num_of_pages, "id": var dialog_id}:
-				pass
-			{"action": "change_scene", "scene": var scene, "spawn": var spawn, "id": var dialog_id}:
-				pass
+				showSplashScreen(path, num_of_pages, dialog_id)
+			{"action": "change_scene", "scene": var scene, "spawn": var spawn, "id": var _dialog_id}:
+				changeScene(scene, spawn)
 	#print(data)
 	self.close()
 

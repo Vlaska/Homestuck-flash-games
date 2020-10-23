@@ -21,7 +21,7 @@
         },
         "chimney": {
             "offset": [0, 0],
-            "pos": [-1187.35, -1784],
+            "pos": [297.65, -1784],
             "pos1": [165, 105],
             "sprite": "res://Objects/Graphics/Outside/chimney.png",
             "prompts": [{
@@ -178,6 +178,6 @@
         }
     },
     "spawns": {
-        "door": []
+        "door": [242, 242]
     }
 }

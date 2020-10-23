@@ -59,7 +59,6 @@ margin_left = 18.0
 margin_right = 218.0
 margin_bottom = 17.0
 rect_min_size = Vector2( 200, 0 )
-text = "to jest test erytfdg5hfdr"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="TestNodeContainer"]
 visible = false

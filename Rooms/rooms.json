@@ -1,0 +1,18 @@
+{
+    "rooms": {
+        "balcony": "res://Rooms/Balcony/Balcony.tscn",
+        "bathroom": "res://Rooms/Bathroom/Bathroom.tscn",
+        "bathroomCorridor": "res://Rooms/BathroomCorridor/BathroomCorridor.tscn",
+        "johnsRoom": "res://Rooms/JohnsRoom/JohnsRoom.tscn",
+        "kitchen": "res://Rooms/Kitchen/Kitchen.tscn",
+        "laundry": "res://Rooms/Laundry/Laundry.tscn",
+        "livingRoom": "res://Rooms/LivingRoom/LivingRoom.tscn",
+        "outside": "res://Rooms/Outside/Outside.tscn",
+        "PS": "res://Rooms/PS/PS.tscn",
+        "studyRoom": "res://Rooms/StudyRoom/StudyRoom.tscn"
+    },
+    "start": {
+        "room": "balcony",
+        "spawn": "gameStart"
+    }
+}
