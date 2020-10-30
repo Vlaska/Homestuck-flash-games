@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialog/Scripts/DialogSelectOptionBasic.gd" type="Script" id=1]
+[ext_resource path="res://Themes And Styles/DialogSelect.tres" type="Theme" id=2]
+
+[node name="DialogSelectOptionBasic" type="HBoxContainer"]
+margin_right = 212.0
+margin_bottom = 17.0
+size_flags_vertical = 0
+theme = ExtResource( 2 )
+custom_constants/separation = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLabelContainer" type="VBoxContainer" parent="."]
+margin_right = 8.0
+margin_bottom = 17.0
+size_flags_vertical = 0
+
+[node name="ArrowLabel" type="Label" parent="ArrowLabelContainer"]
+margin_right = 8.0
+margin_bottom = 17.0
+size_flags_vertical = 0
+text = ">"
+
+[node name="TextLabel" type="Label" parent="."]
+margin_left = 18.0
+margin_right = 18.0
+margin_bottom = 17.0
+size_flags_vertical = 0
+[connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_mouse_exited"]

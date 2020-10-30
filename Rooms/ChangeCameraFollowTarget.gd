@@ -25,12 +25,10 @@ func _ready():
 
 
 func _body_entered(body: Node):
-	print("Entered: ", body.name, " ", body == camera_follows)
 	if body == camera_follows:
 		camera.follow_object = followed_position
 		
 		
 func _body_exited(body: Node):
-	print("Exited: ", body.name, " ", body == camera_follows)
 	if body == camera_follows:
 		camera.set_default_follow_object()

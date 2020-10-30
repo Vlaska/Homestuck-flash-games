@@ -11,8 +11,5 @@ script = ExtResource( 1 )
 centered = false
 
 [node name="Objects" type="Node2D" parent="."]
-
-[node name="WalkableSpace" type="Navigation2D" parent="."]
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableSpace"]
+process_priority = -2
 [connection signal="ready" from="." to="." method="_on_RoomBase_ready"]

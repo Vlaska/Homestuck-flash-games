@@ -5,6 +5,7 @@
 [ext_resource path="res://Dialog/Scripts/DialogSelect.gd" type="Script" id=3]
 
 [node name="DialogSelect" type="PanelContainer"]
+process_priority = -1
 anchor_left = -0.00024231
 anchor_top = 0.000349969
 anchor_right = -0.00024231
@@ -23,7 +24,8 @@ __meta__ = {
 margin_left = 4.88346
 margin_top = 10.024
 margin_right = 10.245
-margin_bottom = 28.1045
+margin_bottom = 10.024
+size_flags_vertical = 0
 custom_constants/separation = 4
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,17 +39,19 @@ centered = false
 
 [node name="TestNodeContainer" type="Control" parent="."]
 visible = false
-margin_left = 5.01198
-margin_top = 10.1525
-margin_right = 17.012
-margin_bottom = 33.1525
+margin_left = 4.88346
+margin_top = 10.024
+margin_right = 10.245
+margin_bottom = 28.1045
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TestNodeContainer"]
-visible = false
 margin_right = 218.0
 margin_bottom = 17.0
 size_flags_horizontal = 0
 custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="TestNodeContainer/HBoxContainer"]
 margin_right = 8.0

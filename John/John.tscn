@@ -1,17 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://John/JohnSprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://John/Scripts/John.gd" type="Script" id=2]
-[ext_resource path="res://Shaders/blur_material.tres" type="Material" id=3]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 24.2675
 height = 41.9531
 
 [node name="John" type="KinematicBody2D"]
-material = ExtResource( 3 )
 position = Vector2( 0.264877, -0.264862 )
-collision_mask = 2
+collision_layer = 2147483649
+collision_mask = 2147483650
 script = ExtResource( 2 )
 
 [node name="JohnSprite" parent="." instance=ExtResource( 1 )]
@@ -19,4 +18,14 @@ script = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.667419, -8.34274 )
 rotation = 1.5708
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+
+[node name="ItemVision" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ItemVision"]
+polygon = PoolVector2Array( -0.00669828, 0.573208, -69.7649, 9.76486, -214.064, 98.3855, -213.265, 334.265, -95.4405, 335.781, 111.63, 336.376, 209.235, 333.765, 209.735, 119.765, 61.7351, 7.76486 )
+[connection signal="area_entered" from="ItemVision" to="." method="item_vision_area_entered"]
+[connection signal="area_exited" from="ItemVision" to="." method="item_vision_area_exited"]

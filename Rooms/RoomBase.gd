@@ -81,7 +81,7 @@ func _on_RoomBase_ready():
 	DialogController.set_objects_parent(object_container)
 
 
-func _unhandled_input(event: InputEvent):
-	if event is InputEventMouseButton:
-		print("Room: ", event)
+# func _unhandled_input(event: InputEvent):
+# 	if event is InputEventMouseButton:
+# 		print("Room: ", event)
 

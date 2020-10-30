@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialog/Scripts/DialogSelectOptionChangeSceene.gd" type="Script" id=1]
+[ext_resource path="res://Dialog/DialogSelectOptionBasic.tscn" type="PackedScene" id=2]
+
+[node name="DialogSelectOptionChangeScene" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+
+[node name="TextLabel" parent="." index="1"]
+percent_visible = 1.0

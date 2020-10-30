@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Dialog/DialogSelectOptionBasic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Dialog/Scripts/DialogSelectOptionSplashscreen.gd" type="Script" id=2]
+
+[node name="DialogSelectOptionSplashscreen" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="TextLabel" parent="." index="1"]
+percent_visible = 1.0

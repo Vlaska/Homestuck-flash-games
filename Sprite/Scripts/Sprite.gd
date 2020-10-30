@@ -32,5 +32,5 @@ func _process(_delta):
 	self.position.y = spritePos.y + sin(spriteFloat) * 40
 
 	var diff = spritePos.x - john.position.x
-	if diff:
+	if abs(diff) >= 0.5:
 		self.scale.x = self.scale.y * sign(diff)

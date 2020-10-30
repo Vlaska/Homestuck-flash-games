@@ -1,4 +1,4 @@
-extends Node2D
+ extends Node2D
 
 
 onready var camera = $Camera
@@ -99,15 +99,11 @@ func _process(_delta):
 
 func sort_objects():
 	var john_position = john.position.y
-	# var prev
 	for i in objects:
-		# prev = i.z_index
 		if i.position.y <= john_position:
 			i.z_index = 0
 		else:
 			i.z_index = 1
-		# if prev != i.z_index:
-		# 	print(i.name, ": ", prev, " ", i.z_index)
 
 
 func offset_static_hud():

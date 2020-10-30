@@ -31,7 +31,7 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( -54.65, -204.15 ) ]
 }
 tracks/1/type = "value"
@@ -59,7 +59,7 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( -53.65, -210.15 ) ]
 }
 tracks/1/type = "value"
@@ -103,7 +103,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 4 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=4]
 resource_name = "TricksterStillFront"
 step = 1.0
 tracks/0/type = "value"
@@ -116,7 +116,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -53.65, -210.15 ) ]
+"values": [ Vector2( -110.15, -210.15 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:texture")
@@ -131,7 +131,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 11 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=5]
 resource_name = "TricksterWalkBack"
 length = 14.0
 loop = true
@@ -161,7 +161,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 18 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 4 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=6]
 resource_name = "TricksterWalkFront"
 length = 14.0
 loop = true
@@ -191,7 +191,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 11 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=7]
 length = 14.0
 loop = true
 step = 1.0
@@ -220,7 +220,7 @@ tracks/1/keys = {
 "values": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 length = 14.0
 loop = true
 step = 1.0
@@ -249,50 +249,11 @@ tracks/1/keys = {
 "values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 2 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "StillBack"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
-animation = "StillFront"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id=8]
-blend_point_0/node = SubResource( 6 )
-blend_point_0/pos = -0.01
-blend_point_1/node = SubResource( 7 )
-blend_point_1/pos = 0.01
-snap = 0.01
-
-[sub_resource type="AnimationNodeAnimation" id=20]
-animation = "TricksterStillBack"
-
-[sub_resource type="AnimationNodeAnimation" id=21]
-animation = "TricksterStillFront"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id=22]
-blend_point_0/node = SubResource( 20 )
-blend_point_0/pos = -0.01
-blend_point_1/node = SubResource( 21 )
-blend_point_1/pos = 0.01
-snap = 0.01
-
-[sub_resource type="AnimationNodeAnimation" id=23]
-animation = "TricksterWalkBack"
-
-[sub_resource type="AnimationNodeAnimation" id=24]
-animation = "TricksterWalkFront"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id=25]
-blend_point_0/node = SubResource( 23 )
-blend_point_0/pos = -0.01
-blend_point_1/node = SubResource( 24 )
-blend_point_1/pos = 0.01
-snap = 0.01
-
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "WalkBack"
-
 [sub_resource type="AnimationNodeAnimation" id=10]
-animation = "WalkFront"
+animation = "StillFront"
 
 [sub_resource type="AnimationNodeBlendSpace1D" id=11]
 blend_point_0/node = SubResource( 9 )
@@ -301,9 +262,54 @@ blend_point_1/node = SubResource( 10 )
 blend_point_1/pos = 0.01
 snap = 0.01
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "TricksterStillBack"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "TricksterStillFront"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=14]
+blend_point_0/node = SubResource( 12 )
+blend_point_0/pos = -0.01
+blend_point_1/node = SubResource( 13 )
+blend_point_1/pos = 0.01
+snap = 0.01
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "TricksterWalkBack"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "TricksterWalkFront"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=17]
+blend_point_0/node = SubResource( 15 )
+blend_point_0/pos = -0.01
+blend_point_1/node = SubResource( 16 )
+blend_point_1/pos = 0.01
+snap = 0.01
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "WalkBack"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "WalkFront"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=20]
+blend_point_0/node = SubResource( 18 )
+blend_point_0/pos = -0.01
+blend_point_1/node = SubResource( 19 )
+blend_point_1/pos = 0.01
+snap = 0.01
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
@@ -319,38 +325,32 @@ snap = 0.01
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
-
-[sub_resource type="AnimationNodeStateMachine" id=14]
-states/Still/node = SubResource( 8 )
+[sub_resource type="AnimationNodeStateMachine" id=33]
+states/Still/node = SubResource( 11 )
 states/Still/position = Vector2( 315, 159 )
-states/TricksterStill/node = SubResource( 22 )
+states/TricksterStill/node = SubResource( 14 )
 states/TricksterStill/position = Vector2( 315, 411 )
-states/TricksterWalk/node = SubResource( 25 )
+states/TricksterWalk/node = SubResource( 17 )
 states/TricksterWalk/position = Vector2( 718, 411 )
-states/Walk/node = SubResource( 11 )
+states/Walk/node = SubResource( 20 )
 states/Walk/position = Vector2( 718, 159 )
-transitions = [ "Still", "Walk", SubResource( 12 ), "Walk", "Still", SubResource( 13 ), "Still", "TricksterStill", SubResource( 26 ), "TricksterStill", "Still", SubResource( 27 ), "Still", "TricksterWalk", SubResource( 28 ), "TricksterWalk", "Still", SubResource( 29 ), "Walk", "TricksterStill", SubResource( 30 ), "TricksterStill", "Walk", SubResource( 31 ), "TricksterStill", "TricksterWalk", SubResource( 32 ), "TricksterWalk", "TricksterStill", SubResource( 33 ), "TricksterWalk", "Walk", SubResource( 34 ), "Walk", "TricksterWalk", SubResource( 35 ) ]
+transitions = [ "Still", "Walk", SubResource( 21 ), "Walk", "Still", SubResource( 22 ), "Still", "TricksterStill", SubResource( 23 ), "TricksterStill", "Still", SubResource( 24 ), "Still", "TricksterWalk", SubResource( 25 ), "TricksterWalk", "Still", SubResource( 26 ), "Walk", "TricksterStill", SubResource( 27 ), "TricksterStill", "Walk", SubResource( 28 ), "TricksterStill", "TricksterWalk", SubResource( 29 ), "TricksterWalk", "TricksterStill", SubResource( 30 ), "TricksterWalk", "Walk", SubResource( 31 ), "Walk", "TricksterWalk", SubResource( 32 ) ]
 start_node = "Still"
 graph_offset = Vector2( -217, -72 )
 
-[sub_resource type="AnimationNodeBlendTree" id=15]
+[sub_resource type="AnimationNodeBlendTree" id=34]
 graph_offset = Vector2( 74, -95 )
-nodes/State/node = SubResource( 14 )
+nodes/State/node = SubResource( 33 )
 nodes/State/position = Vector2( 820, 80 )
 nodes/output/position = Vector2( 1360, 80 )
 node_connections = [ "output", 0, "State" ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 
 [node name="JohnSprite" type="Sprite"]
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 centered = false
-offset = Vector2( -54.65, -204.15 )
+offset = Vector2( -53.65, -210.15 )
 __meta__ = {
 "_edit_vertical_guides_": [ -3.14813 ]
 }
@@ -360,17 +360,17 @@ playback_speed = 35.0
 anims/StillBack = SubResource( 1 )
 anims/StillFront = SubResource( 2 )
 anims/TricksterStillBack = SubResource( 3 )
-anims/TricksterStillFront = SubResource( 17 )
-anims/TricksterWalkBack = SubResource( 19 )
-anims/TricksterWalkFront = SubResource( 18 )
-anims/WalkBack = SubResource( 4 )
-anims/WalkFront = SubResource( 5 )
+anims/TricksterStillFront = SubResource( 4 )
+anims/TricksterWalkBack = SubResource( 5 )
+anims/TricksterWalkFront = SubResource( 6 )
+anims/WalkBack = SubResource( 7 )
+anims/WalkFront = SubResource( 8 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 15 )
+tree_root = SubResource( 34 )
 anim_player = NodePath("../AnimationPlayer")
 process_mode = 2
-parameters/State/playback = SubResource( 16 )
+parameters/State/playback = SubResource( 35 )
 parameters/State/Still/blend_position = 0.00123107
 parameters/State/TricksterStill/blend_position = 0
 parameters/State/TricksterWalk/blend_position = 0

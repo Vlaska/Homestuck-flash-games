@@ -9,6 +9,36 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenDrag",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventMultiScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenPinch",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventScreenPinch.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenTwist",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventScreenTwist.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenDrag",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTap",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenTap.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTouch",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
+}, {
 "base": "Control",
 "class": "Joystick",
 "language": "GDScript",
@@ -25,6 +55,12 @@ _global_script_classes=[ {
 "path": "res://Dialog/Scripts/TextOption.gd"
 } ]
 _global_script_class_icons={
+"InputEventMultiScreenDrag": "",
+"InputEventScreenPinch": "",
+"InputEventScreenTwist": "",
+"InputEventSingleScreenDrag": "",
+"InputEventSingleScreenTap": "",
+"InputEventSingleScreenTouch": "",
 "Joystick": "",
 "TextBreak": "",
 "TextOption": ""
@@ -32,7 +68,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Homestuck test"
+config/name="Homestuck Flash"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
@@ -40,6 +76,7 @@ config/icon="res://icon.png"
 
 UpdateTimer="*res://UpdateTimer.tscn"
 DialogController="*res://Dialog/DialogController.tscn"
+InputManager="*res://InputManager.gd"
 
 [debug]
 
@@ -147,6 +184,12 @@ nextMap={
 prevMap={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
  ]
 }
 

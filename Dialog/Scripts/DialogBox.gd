@@ -7,7 +7,6 @@ var dialog_id: String
 var num_of_pages: int
 var current_page: int = 1
 var playing: bool = false
-var mouse_in_dialog_box: bool = false
 var dialog_box_is_open: bool = false
 var closing_dialog_box: bool = false
 signal dialog_box_closed
@@ -20,7 +19,6 @@ func _ready():
 
 func set_page():
 	if self.current_page <= self.num_of_pages:
-		# print(self.dialog_id, ' ', self.current_page, self.)
 		self.text.text = tr(self.dialog_id + "_" + String(self.current_page))
 		self.text.visible_characters = 0
 		self.current_page += 1
@@ -29,7 +27,6 @@ func set_page():
 
 
 func _input(event: InputEvent):
-	# next dialog page/close
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		var total_character_count = self.text.get_total_character_count()
 		if self.text.visible_characters >= total_character_count:
@@ -39,7 +36,6 @@ func _input(event: InputEvent):
 
 	
 func open_dialog_box(_dialog_id: String, _num_of_pages: int):
-	print(_dialog_id, " ", _num_of_pages)
 	if _num_of_pages <= 0:
 		return
 	animationPlayer.play("Opening")
@@ -73,10 +69,8 @@ func update():
 		text.visible_characters += 1
 
 func mouse_entered():
-	print("mouse_in")
-	self.mouse_in_dialog_box = true
+	DialogController.mouse_in_dialog_box = true
 	
 	
 func mouse_exited():
-	print("mouse_out")
-	self.mouse_in_dialog_box = false
+	DialogController.mouse_in_dialog_box = false
