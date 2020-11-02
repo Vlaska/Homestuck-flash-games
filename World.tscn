@@ -48,6 +48,7 @@ position = Vector2( 12.6445, 236.308 )
 position = Vector2( 500, 320 )
 normal = ExtResource( 13 )
 action = "interact"
+visibility_mode = 1
 script = ExtResource( 14 )
 offset_from_edge = 30.0
 

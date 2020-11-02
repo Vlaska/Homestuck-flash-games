@@ -12,6 +12,5 @@ func init(max_width: int, params: Dictionary, _dialog_state: Array):
 
 
 func clicked():
-	print("change scene")
-	$"/root/MainScene".load_room(self.scene, self.spawn)
+	WorldController.change_room(self.scene, self.spawn)
 

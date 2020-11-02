@@ -75,13 +75,3 @@ func create_objects(data: Dictionary):
 		if "scale" in ob_data:
 			object.scale = vecFromArray(ob_data["scale"])
 		self.object_container.add_child(object)
-
-
-func _on_RoomBase_ready():
-	DialogController.set_objects_parent(object_container)
-
-
-# func _unhandled_input(event: InputEvent):
-# 	if event is InputEventMouseButton:
-# 		print("Room: ", event)
-

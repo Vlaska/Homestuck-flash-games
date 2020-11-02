@@ -5,7 +5,7 @@ var new_pos = Vector2.ZERO
 
 
 func _ready():
-	DialogController.active = false
+	WorldController.active = false
 
 
 func _process(delta):

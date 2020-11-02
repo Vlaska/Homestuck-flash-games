@@ -14,6 +14,7 @@ func vecFromArray(arr: Array) -> Vector2:
 
 
 func init(room_state: Dictionary, name: String, data: Dictionary):
+	# print("init ", name)
 	self.name = name
 	self.prompts = data["prompts"]
 	var img = load(data["sprite"])
@@ -38,6 +39,20 @@ func open_dialog_select():
 	var pos = world.get_local_mouse_position()
 	hud.add_child(dialogSelect)
 	dialogSelect.init(self.dialog_state, prompts, pos)
+
+
+func _input(event: InputEvent):
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT and mouse_in_area:
+		# print(get_name())
+		WorldController.sprite_clicked = true
+
+
+func _on_CollisionArea_mouse_entered():
+	mouse_in_area = true
+	
+	
+func _on_CollisionArea_mouse_exited():
+	mouse_in_area = false
 
 
 func clicked():

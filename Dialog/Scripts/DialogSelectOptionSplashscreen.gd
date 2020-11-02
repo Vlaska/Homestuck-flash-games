@@ -9,5 +9,4 @@ func init(max_width: int, params: Dictionary, _dialog_state: Array):
 
 
 func clicked():
-	print("open splashscreen")
-	$"/root/MainScene/StaticHud/Splashscreen".show_splashscreen(self.path, self.dialog_id, self.num_of_pages)
+	WorldController.show_splashscreen(self.path, self.dialog_id, self.num_of_pages)

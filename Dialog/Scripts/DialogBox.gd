@@ -45,6 +45,7 @@ func open_dialog_box(_dialog_id: String, _num_of_pages: int):
 	self.current_page = 1
 	self.dialog_id = _dialog_id
 	self.num_of_pages = _num_of_pages
+	WorldController.game_state = WorldController.GAME_STATE.DIALOG
 	set_page()
 
 
@@ -53,6 +54,7 @@ func close_dialog_box():
 		animationPlayer.play("Closing")
 		self.dialog_box_is_open = false
 		self.closing_dialog_box = true
+		WorldController.game_state = WorldController.GAME_STATE.INTERACT
 
 
 func dialog_box_is_closed():
@@ -69,8 +71,8 @@ func update():
 		text.visible_characters += 1
 
 func mouse_entered():
-	DialogController.mouse_in_dialog_box = true
+	WorldController.mouse_in_dialog_box = true
 	
 	
 func mouse_exited():
-	DialogController.mouse_in_dialog_box = false
+	WorldController.mouse_in_dialog_box = false

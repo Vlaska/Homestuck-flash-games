@@ -15,13 +15,17 @@ var mouse_position
 var viewport_size
 var pos_in_hud
 
+var index_of_selected_dialog_select: int = -1
+
 
 func _ready():
 	font.set_size(get_node("/root/MainScene").font_size)
-	DialogController.dialog_select = self
+	WorldController.dialog_select = self
 
 
 func init(_dialog_state: Array, data: Array, _pos_in_hud: Vector2):
+	WorldController.game_state = WorldController.GAME_STATE.SELECT_DIALOG
+
 	var camera_zoom = get_node("/root/MainScene/Camera").zoom
 	var viewport = get_viewport()
 
@@ -31,7 +35,6 @@ func init(_dialog_state: Array, data: Array, _pos_in_hud: Vector2):
 
 	self.rect_scale = camera_zoom
 	self.rect_min_size = Vector2(viewport_size.x / 2, 0)
-	# var max_text_width = int((viewport_size.x * 3 / 4) * camera_zoom.x)
 	mouse_position = viewport.get_mouse_position()
 
 	var tmp
@@ -64,9 +67,6 @@ func init(_dialog_state: Array, data: Array, _pos_in_hud: Vector2):
 	self.rect_min_size.x = min_width
 	self.rect_position = pos_in_hud
 
-	# Force resize of container
-	#self.rect_size = Vector2(1, 1)
-
 	if self.rect_size.y + mouse_position.y >= viewport_size.y:
 		self.rect_position.y += viewport_size.y - (self.rect_size.y + mouse_position.y)
 	if self.rect_min_size.x + mouse_position.x + 1 >= viewport_size.x - 10:
@@ -93,44 +93,18 @@ func create_label(data: Dictionary, max_text_width: int):
 
 
 func close():
-	DialogController.mouse_in_text_select = false
-	DialogController.dialog_select = null
+	WorldController.mouse_in_text_select = false
+	WorldController.dialog_select = null
+	if WorldController.game_state == WorldController.GAME_STATE.SELECT_DIALOG:
+		WorldController.game_state = WorldController.GAME_STATE.INTERACT
 	queue_free()
 
 
-# func openDialogBox(dialog_id: String, num_of_pages: int):
-	# get_node("/root/MainScene/StaticHud/DialogBox").open_dialog_box(dialog_id, num_of_pages)
-
-
-# func showSplashScreen(path, num_of_pages, dialog_id):
-	# get_node("/root/MainScene/StaticHud/Splashscreen").show_splashscreen(path, dialog_id, num_of_pages)
-
-
-# func changeScene(room_name, spawn):
-# 	$"/root/MainScene".load_room(room_name, spawn)
-
-
-# func label_clicked(meta):
-# 	var data = JSON.parse(meta).result
-# 	if data:
-# 		match data:
-# 			{"action": "dialog", "num_of_pages": var num_of_pages, "next": var next, "id": var dialog_id, "index": var index}:
-# 				self.dialog_state[index] = next
-# 				openDialogBox(dialog_id, get_num_of_pages(num_of_pages))
-# 			{"action": "dialog", "num_of_pages": var num_of_pages, "id": var dialog_id}:
-# 				openDialogBox(dialog_id, get_num_of_pages(num_of_pages))
-# 			{"action": "splashscreen", "path": var path, "num_of_pages": var num_of_pages, "id": var dialog_id}:
-# 				showSplashScreen(path, num_of_pages, dialog_id)
-# 			{"action": "change_scene", "scene": var scene, "spawn": var spawn, "id": var _dialog_id}:
-# 				changeScene(scene, spawn)
-	# self.close()
-
-
 func _mouse_entered():
-	DialogController.mouse_in_text_select = true
+	WorldController.mouse_in_text_select = true
 	
 func _mouse_exited():
-	DialogController.mouse_in_text_select = false
+	WorldController.mouse_in_text_select = false
 
 
 func process_click():
@@ -139,3 +113,10 @@ func process_click():
 			i.clicked()
 			self.close()
 			return
+
+
+func _process(_delta: float):
+	if Input.is_action_just_pressed("ui_up"):
+		pass
+	elif Input.is_action_just_pressed("ui_down"):
+		pass

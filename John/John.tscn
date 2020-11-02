@@ -19,13 +19,3 @@ script = ExtResource( 2 )
 position = Vector2( 0.667419, -8.34274 )
 rotation = 1.5708
 shape = SubResource( 1 )
-
-[node name="ItemVision" type="Area2D" parent="."]
-monitorable = false
-collision_layer = 8
-collision_mask = 4
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ItemVision"]
-polygon = PoolVector2Array( -0.00669828, 0.573208, -69.7649, 9.76486, -214.064, 98.3855, -213.265, 334.265, -95.4405, 335.781, 111.63, 336.376, 209.235, 333.765, 209.735, 119.765, 61.7351, 7.76486 )
-[connection signal="area_entered" from="ItemVision" to="." method="item_vision_area_entered"]
-[connection signal="area_exited" from="ItemVision" to="." method="item_vision_area_exited"]

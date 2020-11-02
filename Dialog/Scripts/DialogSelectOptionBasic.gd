@@ -5,7 +5,6 @@ var num_of_pages
 
 const TextBreak = preload("res://Dialog/Scripts/TextBreak.gd")
 
-onready var dialog_box = $"/root/MainScene/StaticHud/DialogBox"
 onready var textLabel = $TextLabel
 onready var arrowLabel = $ArrowLabelContainer/ArrowLabel
 var mouse_inside: bool = false
@@ -47,7 +46,7 @@ func _mouse_exited():
 
 
 func clicked():
-	dialog_box.open_dialog_box(dialog_id, get_num_of_pages())
+	WorldController.open_dialog_box(dialog_id, get_num_of_pages())
 
 
 func update():

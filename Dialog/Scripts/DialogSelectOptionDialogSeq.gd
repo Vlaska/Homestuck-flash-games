@@ -13,7 +13,6 @@ func init(max_width: int, params: Dictionary, _dialog_state: Array):
 	self.dialog_state = dialog_state
 
 func clicked():
-	print("open sequence dialog")
 	.clicked()
 	self.dialog_state[self.index] = self.next
 

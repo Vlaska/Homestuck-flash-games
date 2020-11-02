@@ -7,24 +7,15 @@ var vel = Vector2.ZERO
 var prevVFacingDirection = 1  # 1 down, -1 up
 var prevHFacingDirection = 1  # 1 right, -1 left
 
-# export(NodePath) var joystick_path
-
 onready var sprite = $JohnSprite
 onready var spriteAnimationPlayer = $JohnSprite/AnimationPlayer
 onready var spriteAnimationTree = $JohnSprite/AnimationTree
 onready var spriteAnimationState = spriteAnimationTree.get("parameters/State/playback")
 onready var camera = get_node("/root/MainScene/Camera")
-onready var item_vision_area = $ItemVision
-# onready var joystick = get_node(joystick_path)
 
-# shoud be squared
-const DEADZONE = 25
 
-var trickster_mode_active = false
-
-var _scale = 1
-var is_touched = false
-var touchPosition = Vector2.ZERO
+enum JOHN_STATE { NORMAL, TRICKSTER }
+var john_state = JOHN_STATE.NORMAL
 
 
 func _ready():
@@ -37,7 +28,11 @@ func update():
 
 
 func _physics_process(delta):
-	move_state(delta)
+	match WorldController.game_state:
+		WorldController.GAME_STATE.INTERACT:
+			move_state(delta)
+		_:
+			return
 
 
 func move_state(_delta):
@@ -46,17 +41,14 @@ func move_state(_delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	if (
 		input_vector == Vector2.ZERO
-		and not (DialogController.input_handled or DialogController.mouse_in_dialog_box)
+		and not (WorldController.input_handled or WorldController.mouse_in_dialog_box)
 	):
 		if Input.is_action_pressed("click"):
 			input_vector = get_local_mouse_position()
-		# elif joystick.is_working:
-		# 	input_vector = joystick.output
 	input_vector = input_vector.normalized()
 
 	if Input.is_action_just_pressed("trickster_mode_toggle"):
-		self.trickster_mode_active = not self.trickster_mode_active
-		self.change_character_state()
+		toggle_trickster_mode()
 
 	if input_vector != Vector2.ZERO:
 		var h_direction_sign = sign(input_vector.x)
@@ -74,8 +66,7 @@ func move_state(_delta):
 				prevHFacingDirection = h_direction_sign
 				sprite.scale.x *= -1
 
-		vel += (input_vector * spd / _delta) / (3.5 * _scale)
-		item_vision_area.rotation_degrees = (input_vector.angle() * 180.0 / PI) - 90
+		vel += (input_vector * spd / _delta) / 3.5
 
 		spriteAnimationState.travel("Walk")
 	else:
@@ -86,41 +77,21 @@ func move_state(_delta):
 	vel = move_and_slide(vel)
 
 
-# func _input(event):
-# 	var tmp = event is InputEventSingleScreenTouch
-# 	if tmp or event is InputEventSingleScreenDrag or event is InputEventSingleScreenTap:
-# 		touchPosition = get_local_mouse_position()
-# 	if tmp:
-# 		is_touched = event.pressed
+func toggle_trickster_mode():
+	match john_state:
+		JOHN_STATE.NORMAL:
+			turn_on_trickster_mode()
+		JOHN_STATE.TRICKSTER:
+			turn_off_trickster_mode()
 
 
-func change_parent(new_parent):
-	get_parent().call_deferred("remove_child", self)
-	new_parent.call_deferred("add_child", self)
-
-
-func change_character_state():
-	if trickster_mode_active:
-		self.set_collision_layer_bit(0, false)
-		self.set_collision_layer_bit(19, true)
-	else:
-		self.set_collision_layer_bit(0, true)
-		self.set_collision_layer_bit(19, false)
-
-
-var objects_in_reach = {}
-
-
-func item_vision_area_entered(area: Area2D):
-	var parent = area.get_parent()
-	objects_in_reach[parent.get_name()] = parent
-	print("Area entered: ", area.get_parent().get_name())
-	print(objects_in_reach)
+func turn_off_trickster_mode():
+	john_state = JOHN_STATE.NORMAL
+	self.set_collision_layer_bit(0, true)
+	self.set_collision_layer_bit(19, false)
 	
 	
-func item_vision_area_exited(area: Area2D):
-	var parent = area.get_parent()
-	objects_in_reach.erase(parent.get_name())
-	print("Area exited: ", area.get_parent().get_name())
-	print(objects_in_reach)
-		
+func turn_on_trickster_mode():
+	john_state = JOHN_STATE.TRICKSTER
+	self.set_collision_layer_bit(0, false)
+	self.set_collision_layer_bit(19, true)

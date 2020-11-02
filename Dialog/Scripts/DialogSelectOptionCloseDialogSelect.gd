@@ -2,8 +2,7 @@ extends "res://Dialog/Scripts/DialogSelectOptionBasic.gd"
 
 
 func clicked():
-	if DialogController.dialog_select:
-		DialogController.dialog_select.close()
+	WorldController.close_dialog_select()
 
 
 func set_text(max_width: int):

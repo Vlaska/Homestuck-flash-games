@@ -28,7 +28,7 @@ func show_splashscreen(path: String, _dialog_id: String, _num_of_pages: int):
 	self.dialog_id = _dialog_id
 	self.num_of_pages = _num_of_pages
 	self.room_transition.play("HideBg")
-	DialogController.splashscreen = true
+	WorldController.game_state = WorldController.GAME_STATE.SPLASHSCREEN
 	
 
 
@@ -46,7 +46,7 @@ func hide_splashscreen():
 		state = CLOSED
 		self.mouse_filter = self.MOUSE_FILTER_IGNORE
 		self.room_transition.play("Empty")
-		DialogController.splashscreen = false
+		WorldController.game_state = WorldController.GAME_STATE.INTERACT
 
 
 func _pressed():
