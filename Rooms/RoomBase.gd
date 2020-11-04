@@ -19,20 +19,6 @@ func vecFromArray(arr: Array) -> Vector2:
 	return Vector2(arr[0], arr[1])
 
 
-func load_data_from_file():
-	var objects_data_file = File.new()
-	if not objects_data_file.file_exists(objects_data_path):
-		print("File with room data not found: ", objects_data_path)
-		return
-	objects_data_file.open(objects_data_path, File.READ)
-	var parsed_json = JSON.parse(objects_data_file.get_as_text())
-	if not (parsed_json.result is Dictionary):
-		print(room_name, ": ", parsed_json.error_string, ", at ", parsed_json.error_line)
-
-	objects_data = parsed_json.result
-	objects_data_file.close()
-
-
 func _ready():
 	var camera = get_node("/root/MainScene/Camera")
 	camera.limit_left = cameraHorizontalLimits.x
@@ -42,7 +28,10 @@ func _ready():
 	camera.zoom = cameraZoom
 
 	if not(room_name in world_state):
-		load_data_from_file()
+		objects_data = WorldController.load_data_from_file(objects_data_path)
+		if not objects_data:
+			push_error("Error parsing room data: " + room_name)
+			return
 
 		var objects = {}
 		for key in objects_data["objects"]:
@@ -75,3 +64,7 @@ func create_objects(data: Dictionary):
 		if "scale" in ob_data:
 			object.scale = vecFromArray(ob_data["scale"])
 		self.object_container.add_child(object)
+
+
+func on_load():
+	pass

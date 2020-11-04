@@ -9,16 +9,19 @@ onready var textLabel = $TextLabel
 onready var arrowLabel = $ArrowLabelContainer/ArrowLabel
 var mouse_inside: bool = false
 var total_character_count
+var label_index: int
+signal mouse_changed(label_index, inside)
 
 
 func _ready():
 	UpdateTimer.connect("timeout", self, "update")
 
 
-func init(max_width: int, params: Dictionary, _dialog_state: Array):
+func init(max_width: int, params: Dictionary, _dialog_state: Array, _label_index: int):
 	self.dialog_id = params["id"]
 	self.num_of_pages = params.get("num_of_pages", 0)
-	
+	self.label_index = _label_index
+
 	textLabel = $TextLabel
 	arrowLabel = $ArrowLabelContainer/ArrowLabel
 	# print(textLabel)
@@ -34,13 +37,23 @@ func set_text(max_width: int):
 
 
 func _mouse_entered():
-	mouse_inside = true
+	# mouse_inside = true
+	emit_signal("mouse_changed", self.label_index, true)
+	highlight_label_on()
+
+
+func highlight_label_on():
 	self.textLabel.set("custom_colors/font_color", Color8(160, 160, 160))
 	self.arrowLabel.set("custom_colors/font_color", Color8(160, 160, 160))
-	
+
 	
 func _mouse_exited():
-	mouse_inside = false
+	# mouse_inside = false
+	emit_signal("mouse_changed", self.label_index, false)
+	highlight_label_off()
+		
+
+func highlight_label_off():
 	self.textLabel.set("custom_colors/font_color", Color8(255, 255, 255))
 	self.arrowLabel.set("custom_colors/font_color", Color8(255, 255, 255))
 

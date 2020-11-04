@@ -8,17 +8,59 @@ var mouse_in_text_select: bool = false
 var mouse_in_dialog_box: bool = false
 var active = false
 
+const DialogSelect = preload("res://Dialog/DialogSelect.tscn")
+
 onready var world = get_node("/root/MainScene")
 onready var dialog_box = get_node("/root/MainScene/StaticHud/DialogBox")
 onready var hud = get_node("/root/MainScene/Hud")
-onready var player_objects = get_node("/root/MainScene/Scene/Player")
+onready var john = get_node("/root/MainScene/Scene/Player/John")
 onready var splashscreen = get_node("/root/MainScene/StaticHud/Splashscreen")
+onready var dpad = get_node("/root/MainScene/StaticHudWholeScreen/DPad")
+onready var interact_button = get_node("/root/MainScene/StaticHudWholeScreen/InteractButton")
+onready var static_hud = get_node("/root/MainScene/StaticHudWholeScreen")
+var click_position: Vector2 = Vector2.ZERO
 var dialog_select = null
 var input_handled = false
+var is_mobile: bool = false
+var font_size: int = 14
+
+export(float) var change_state_input_delay: float = 0.5
+var timer: float = 0.0
 
 enum GAME_STATE { INTERACT, SELECT_DIALOG, DIALOG, SPLASHSCREEN, CHANGE_ROOM }
 
-var game_state = GAME_STATE.INTERACT
+var game_state = GAME_STATE.INTERACT setget set_game_state, get_game_state
+
+
+func set_game_state(value):
+	game_state = value
+	timer = 0
+	match value:
+		GAME_STATE.INTERACT, GAME_STATE.DIALOG, GAME_STATE.CHANGE_ROOM:
+			dpad.visible = true
+			interact_button.visible = false
+		GAME_STATE.SELECT_DIALOG:
+			dpad.visible = true
+			interact_button.visible = true
+		GAME_STATE.SPLASHSCREEN:
+			dpad.visible = false
+			interact_button.visible = false
+
+
+func get_game_state():
+	return game_state
+
+
+func _ready():
+	var device_type = OS.get_name().to_lower()
+	if OS.has_feature("JavaScript"):
+		is_mobile = JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)")
+		if is_mobile:
+			font_size = 24
+	elif device_type == 'android' or device_type == 'ios':
+		is_mobile = true
+		font_size = 24
+	InputManager.connect("single_tap", self, "_input")
 
 
 func open_dialog_box(dialog_id: String, num_of_pages: int):
@@ -27,6 +69,13 @@ func open_dialog_box(dialog_id: String, num_of_pages: int):
 
 func change_room(scene: String, spawn: String):
 	self.world.load_room(scene, spawn)
+
+
+func open_dialog_select(dialog_state: Array, prompts: Array):
+	var dialogSelect = DialogSelect.instance()
+
+	hud.add_child(dialogSelect)
+	dialogSelect.init(dialog_state, prompts)
 
 
 func close_dialog_select():
@@ -43,27 +92,40 @@ func is_mouse_click(event: InputEvent):
 
 
 func is_touch_tap(event: InputEvent):
-	return event is InputEventSingleScreenTap and event.pressed
+	return event is InputEventScreenTouch and event.pressed
+	# return event is InputEvent
 
 
 func is_mouse_click_or_touch_tap_event(event: InputEvent):
 	return is_mouse_click(event) or is_touch_tap(event)
 
 
+func _process(delta):
+	timer += delta
+
+
 func _input(event: InputEvent):
-	if not self.active:
+	if not self.active or timer < change_state_input_delay:
 		return
 	match self.game_state:
 		GAME_STATE.INTERACT:
+			# print(event.to_string())
 			if not self.is_mouse_click_or_touch_tap_event(event) or dialog_box.closing_dialog_box:
 				return
 
 			get_tree().set_input_as_handled()
+			click_position = get_global_mouse_position() if not is_touch_tap(event) else get_canvas_transform().xform_inv(event.position)
+			
+			if is_mobile and (dpad.pos_in_collision(event.position) or interact_button.pos_in_collision(event.position)):
+				return
 
 			var space_state = get_world_2d().direct_space_state
 			var interactables = space_state.intersect_point(
-				get_global_mouse_position(), 32, [], 2147483647, false, true
+				click_position, 32, [], 2147483647, false, true
 			)
+			for i in interactables:
+				if i["collider"].get_parent().is_in_group("control"):
+					return
 			if (
 				len(interactables) == 0
 				or not interactables[-1]["collider"].get_parent().is_in_group("interactable")
@@ -79,5 +141,25 @@ func _input(event: InputEvent):
 				else:
 					self.dialog_select.close()
 					self.mouse_in_text_select = false
+
+		GAME_STATE.SPLASHSCREEN:
+			if is_touch_tap(event):
+				splashscreen._pressed()
 		_:
 			return
+
+
+func load_data_from_file(path):
+	var file = File.new()
+	if not file.file_exists(path):
+		print("File with room data not found: ", path)
+		return
+	file.open(path, File.READ)
+	var parsed_json = JSON.parse(file.get_as_text())
+	file.close()
+	if parsed_json.error != OK:
+		print(parsed_json.error_string, ", at ", parsed_json.error_line)
+		return null
+
+	var result = parsed_json.result
+	return result

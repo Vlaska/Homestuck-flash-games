@@ -7,11 +7,14 @@
 radius = 24.2675
 height = 41.9531
 
-[node name="John" type="KinematicBody2D"]
+[node name="John" type="KinematicBody2D" groups=[
+"interactable",
+]]
 position = Vector2( 0.264877, -0.264862 )
 collision_layer = 2147483649
 collision_mask = 2147483650
 script = ExtResource( 2 )
+dialog_data_path = "res://John/John.json"
 
 [node name="JohnSprite" parent="." instance=ExtResource( 1 )]
 
@@ -19,3 +22,8 @@ script = ExtResource( 2 )
 position = Vector2( 0.667419, -8.34274 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="InputArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InputArea"]
+polygon = PoolVector2Array( -53.2251, 14.6383, -75.2986, -176.876, -28.4186, -224.597, 56.0915, -226.909, 102.551, -168.257, 88.8864, -84.5874, 50.2052, 15.269 )

@@ -4,13 +4,10 @@
 [ext_resource path="res://Rooms/PS/302.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/PS/310.png" type="Texture" id=3]
 [ext_resource path="res://Rooms/ChangeCameraFollowTarget.tscn" type="PackedScene" id=4]
-
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 446.511, 654.907, -78.7055, 421.743, 459.852, 306.056, 693.728, 417.072, 850.105, 364.179, 1012.87, 415.487 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3 ) ]
-outlines = [ PoolVector2Array( 459.852, 306.056, 693.728, 417.072, 850.105, 364.179, 1012.87, 415.487, 446.511, 654.907, -78.7055, 421.743 ) ]
+[ext_resource path="res://Rooms/PS/PS.gd" type="Script" id=5]
 
 [node name="RoomBase" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
 objects_data_path = "res://Objects/Data/PS.json"
 room_name = "PS"
 
@@ -37,8 +34,5 @@ position_to_follow = Vector2( 900, 245 )
 
 [node name="CollisionPolygon2D" parent="ChangeCameraFollowTarget" index="0"]
 polygon = PoolVector2Array( 850, 360.5, 692.6, 416.331, 850.5, 491.5, 1025.5, 417 )
-
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )
 
 [editable path="ChangeCameraFollowTarget"]

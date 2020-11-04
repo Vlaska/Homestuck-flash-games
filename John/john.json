@@ -1,84 +1,55 @@
-{"frames": {
-
-"77.png":
-{
-	"frame": {"x":0,"y":0,"w":146,"h":222},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":222},
-	"sourceSize": {"w":146,"h":222}
-},
-"78.png":
-{
-	"frame": {"x":146,"y":0,"w":166,"h":224},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":166,"h":224},
-	"sourceSize": {"w":166,"h":224}
-},
-"79.png":
-{
-	"frame": {"x":312,"y":0,"w":146,"h":221},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":221},
-	"sourceSize": {"w":146,"h":221}
-},
-"80.png":
-{
-	"frame": {"x":458,"y":0,"w":146,"h":223},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":223},
-	"sourceSize": {"w":146,"h":223}
-},
-"81.png":
-{
-	"frame": {"x":604,"y":0,"w":146,"h":219},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":219},
-	"sourceSize": {"w":146,"h":219}
-},
-"82.png":
-{
-	"frame": {"x":750,"y":0,"w":146,"h":224},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":224},
-	"sourceSize": {"w":146,"h":224}
-},
-"83.png":
-{
-	"frame": {"x":896,"y":0,"w":146,"h":222},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":146,"h":222},
-	"sourceSize": {"w":146,"h":222}
-},
-"84.png":
-{
-	"frame": {"x":1042,"y":0,"w":174,"h":209},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":174,"h":209},
-	"sourceSize": {"w":174,"h":209}
-},
-"85.png":
-{
-	"frame": {"x":1216,"y":0,"w":174,"h":210},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":174,"h":210},
-	"sourceSize": {"w":174,"h":210}
-}},
-"meta": {
-	"app": "https://www.codeandweb.com/texturepacker",
-	"version": "1.0",
-	"image": "john.png",
-	"format": "RGBA8888",
-	"size": {"w":1390,"h":224},
-	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e114986aca5fe1476a6712e17479c73b:880244ca74e78b4ac686a84d8ff8c42c:e662039fb8d29c6fca6d571fe8687636$"
-}
-}
+[{
+    "sequence": {
+        "CHAR_CLICKS_0": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_1"
+        },
+        "CHAR_CLICKS_1": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_2"
+        },
+        "CHAR_CLICKS_2": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_3"
+        },
+        "CHAR_CLICKS_3": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_4"
+        },
+        "CHAR_CLICKS_4": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_5"
+        },
+        "CHAR_CLICKS_5": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_6"
+        },
+        "CHAR_CLICKS_6": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_7"
+        },
+        "CHAR_CLICKS_7": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_8"
+        },
+        "CHAR_CLICKS_8": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_9"
+        },
+        "CHAR_CLICKS_9": {
+          "action": "dialog",
+          "num_of_pages": 1,
+          "next": "CHAR_CLICKS_0"
+        }
+    },
+    "first": "CHAR_CLICKS_0"
+}]

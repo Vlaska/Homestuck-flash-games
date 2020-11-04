@@ -52,3 +52,8 @@ func hide_splashscreen():
 func _pressed():
 	if state == OPEN_DIALOG_HIDDEN:
 		open_dialog()
+
+
+# func _input(event: InputEvent):
+# 	if WorldController.is_touch_tap(event):
+# 		_pressed()

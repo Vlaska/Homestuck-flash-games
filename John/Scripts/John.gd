@@ -12,15 +12,25 @@ onready var spriteAnimationPlayer = $JohnSprite/AnimationPlayer
 onready var spriteAnimationTree = $JohnSprite/AnimationTree
 onready var spriteAnimationState = spriteAnimationTree.get("parameters/State/playback")
 onready var camera = get_node("/root/MainScene/Camera")
+onready var input_area = $InputArea
 
+export(String, FILE, "*.json") var dialog_data_path = ""
 
 enum JOHN_STATE { NORMAL, TRICKSTER }
 var john_state = JOHN_STATE.NORMAL
+
+var dialog_state = []
+var dialog_data: Array
 
 
 func _ready():
 	spriteAnimationTree.active = true
 	UpdateTimer.connect("timeout", self, "update")
+	dialog_data = WorldController.load_data_from_file(dialog_data_path)
+	for i in dialog_data:
+		match i:
+			{"sequence": _, "first": var first}:
+				dialog_state.append(first)
 
 
 func update():
@@ -65,6 +75,7 @@ func move_state(_delta):
 			if h_direction_sign != prevHFacingDirection:
 				prevHFacingDirection = h_direction_sign
 				sprite.scale.x *= -1
+				input_area.scale.x *= -1
 
 		vel += (input_vector * spd / _delta) / 3.5
 
@@ -95,3 +106,8 @@ func turn_on_trickster_mode():
 	john_state = JOHN_STATE.TRICKSTER
 	self.set_collision_layer_bit(0, false)
 	self.set_collision_layer_bit(19, true)
+
+
+func clicked():
+	WorldController.open_dialog_select(dialog_state, dialog_data)
+

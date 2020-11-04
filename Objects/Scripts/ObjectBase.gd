@@ -33,14 +33,6 @@ func set_collision_position(pos: Vector2):
 	$CollisionArea.position = pos
 
 
-func open_dialog_select():
-	var hud = get_node("/root/MainScene/Hud")
-	var dialogSelect = DialogSelect.instance()
-	var pos = world.get_local_mouse_position()
-	hud.add_child(dialogSelect)
-	dialogSelect.init(self.dialog_state, prompts, pos)
-
-
 func _input(event: InputEvent):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT and mouse_in_area:
 		# print(get_name())
@@ -56,4 +48,4 @@ func _on_CollisionArea_mouse_exited():
 
 
 func clicked():
-	open_dialog_select()
+	WorldController.open_dialog_select(dialog_state, prompts)

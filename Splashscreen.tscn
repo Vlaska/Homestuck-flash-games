@@ -5,6 +5,7 @@
 [node name="Splashscreen" type="TextureButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+shortcut_in_tooltip = false
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

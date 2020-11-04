@@ -1,14 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://DPad/dpad.png" type="Texture" id=1]
 [ext_resource path="res://DPad/DPadCenter.png" type="Texture" id=2]
 [ext_resource path="res://DPad/DPadButton.png" type="Texture" id=3]
 [ext_resource path="res://DPad/DPadButtonPressed.png" type="Texture" id=4]
+[ext_resource path="res://DPad/DPad.gd" type="Script" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( -67, 0, -67, 30, 8, 75, 32, 79, 58, 75, 133, 30, 133, 0 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 100, 100 )
+
 [node name="DPad" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 visible = false
@@ -63,3 +68,9 @@ visibility_mode = 1
 position = Vector2( 74.7898, 75 )
 normal = ExtResource( 2 )
 visibility_mode = 1
+
+[node name="IgnoreTouchArea" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="IgnoreTouchArea"]
+position = Vector2( 100, 100 )
+shape = SubResource( 2 )

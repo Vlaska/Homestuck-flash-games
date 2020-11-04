@@ -6,8 +6,7 @@ onready var john = $Scene/Player/John
 onready var objects = $Scene/Room/Objects.get_children()
 onready var staticHud = $StaticHud
 onready var display_width = ProjectSettings.get("display/window/size/width")
-var font_size: float = 14
-var is_mobile: bool = false
+onready var fps_label = $StaticHudWholeScreen/FPS
 
 export(String, FILE, "*.json") var room_list_path
 export(bool) var dialog_active = true setget set_dialog_active, get_dialog_active
@@ -78,14 +77,6 @@ func load_maps_data():
 
 func _ready():
 	get_viewport().connect("size_changed", self, "offset_static_hud")
-	var device_type = OS.get_name().to_lower()
-	if OS.has_feature("JavaScript"):
-		is_mobile = JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)")
-		if is_mobile:
-			font_size = 24
-	elif device_type == 'android' or device_type == 'ios':
-		is_mobile = true
-		font_size = 24
 	offset_static_hud()
 	WorldController.active = dialog_active
 	VisualServer.set_default_clear_color(Color(1, 1, 1, 1))
@@ -96,6 +87,7 @@ func _ready():
 
 
 func _process(_delta):
+	fps_label.text = str(Engine.get_frames_per_second())
 	sort_objects()
 
 
@@ -126,6 +118,7 @@ func change_map():
 	self.john.position = vecFromArray(world_state[new_room_name]["data"]["spawns"][john_spawn_name])
 	self.camera.position = self.john.position
 	WorldController.game_state = WorldController.GAME_STATE.INTERACT
+	new_room.on_load()
 
 
 func start_changing_room():

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MouseAndButtons/InteractIcon.png" type="Texture" id=1]
+[ext_resource path="res://MouseAndButtons/InteractButton.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.0
+
+[node name="InteractButton" type="TouchScreenButton" groups=[
+"control",
+]]
+position = Vector2( 500, 320 )
+normal = ExtResource( 1 )
+action = "interact"
+visibility_mode = 1
+script = ExtResource( 2 )
+offset_from_edge = 30.0
+
+[node name="IgnoreTouchArea" type="Area2D" parent="."]
+position = Vector2( -499, -320 )
+
+[node name="Shape" type="CollisionShape2D" parent="IgnoreTouchArea"]
+position = Vector2( 550, 370 )
+shape = SubResource( 1 )

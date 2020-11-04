@@ -170,7 +170,6 @@ __meta__ = {
 
 [node name="Area2D" type="Area2D" parent="OtherObjects/TricksterModeKeys" index="0"]
 rotation = 4.76837e-07
-scale = Vector2( 1, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OtherObjects/TricksterModeKeys/Area2D" index="0"]
 position = Vector2( 195.437, 1848.47 )

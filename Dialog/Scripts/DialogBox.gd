@@ -27,7 +27,7 @@ func set_page():
 
 
 func _input(event: InputEvent):
-	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+	if WorldController.is_mouse_click_or_touch_tap_event(event):
 		var total_character_count = self.text.get_total_character_count()
 		if self.text.visible_characters >= total_character_count:
 			set_page()
