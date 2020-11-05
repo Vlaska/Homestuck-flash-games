@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Kitchen/291.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/Kitchen/271.png" type="Texture" id=3]
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 46.0494, 312.501, -121.703, 226.432, 127.956, 114.721, 137.841, 135.68, 672.91, 182.877, 923.387, 301.277, 507.164, 514.591, 417.082, 39.4286, 707.025, 141.923, 684.43, 156.714, 150.997, 154.782, 163.855, 371.664, 672.464, 169.572, 228.741, 108.477, 220.788, 97.1051, 303.661, 54.2194, 170.247, 165.336, 186.376, 166.079, 288.35, 426.739, 352.79, 68.8615, 669.491, 177.971, 482.563, 522.544, 453.501, 527.004, 413.514, 523.882, 379.473, 510.429, 348.108, 492.591, 312.506, 461.077, 221.457, 150.471, 228.964, 142.146, 206.221, 159.316, 232.68, 126.315, 324.621, 64.4763, 337.777, 68.7872 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6 ), PoolIntArray( 7, 8, 9 ), PoolIntArray( 0, 3, 10, 11 ), PoolIntArray( 7, 9, 12 ), PoolIntArray( 13, 14, 15 ), PoolIntArray( 11, 10, 16 ), PoolIntArray( 11, 16, 17, 18 ), PoolIntArray( 19, 7, 12, 20, 6, 21, 22, 23, 24, 25, 26, 18, 27, 28 ), PoolIntArray( 18, 17, 29 ), PoolIntArray( 18, 29, 27 ), PoolIntArray( 30, 13, 15, 31 ), PoolIntArray( 20, 4, 6 ), PoolIntArray( 32, 19, 28, 30 ), PoolIntArray( 32, 30, 31 ) ]
-outlines = [ PoolVector2Array( 127.956, 114.721, -121.703, 226.432, 46.0494, 312.501, 163.855, 371.664, 288.35, 426.739, 312.506, 461.077, 348.108, 492.591, 379.473, 510.429, 413.514, 523.882, 453.501, 527.004, 482.563, 522.544, 507.164, 514.591, 923.387, 301.277, 672.91, 182.877, 669.491, 177.971, 672.464, 169.572, 684.43, 156.714, 707.025, 141.923, 417.082, 39.4286, 352.79, 68.8615, 337.777, 68.7872, 324.621, 64.4763, 303.661, 54.2194, 220.788, 97.1051, 228.741, 108.477, 232.68, 126.315, 228.964, 142.146, 221.457, 150.471, 206.221, 159.316, 186.376, 166.079, 170.247, 165.336, 150.997, 154.782, 137.841, 135.68 ) ]
-
 [node name="RoomBase" instance=ExtResource( 1 )]
+cameraHorizontalLimits = Vector2( -368, 1013 )
 objects_data_path = "res://Objects/Data/Kitchen.json"
 room_name = "kitchen"
 
@@ -23,10 +19,7 @@ polygon = PoolVector2Array( 293.639, 47.9445, 304.15, 54.4615, 324.962, 64.5522,
 position = Vector2( -418.4, -409.3 )
 texture = ExtResource( 3 )
 
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )
-
-[node name="291" type="Sprite" parent="." index="4"]
+[node name="291" type="Sprite" parent="." index="3"]
 visible = false
 position = Vector2( -367.1, 63.15 )
 texture = ExtResource( 2 )

@@ -34,7 +34,7 @@ func show_splashscreen(path: String, _dialog_id: String, _num_of_pages: int):
 
 func open_dialog():
 	if num_of_pages:
-		dialog_box.open_dialog_box(dialog_id, num_of_pages)
+		WorldController.open_dialog_box(dialog_id, num_of_pages)
 		state = OPEN_DIALOG_SHOWN
 	else:
 		hide_splashscreen()

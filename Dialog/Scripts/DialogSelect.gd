@@ -45,7 +45,6 @@ func init(_dialog_state: Array, data: Array):
 	textBreak = TextBreak.new(font)
 	var dialog_option_index = 0
 	num_of_text_options = len(data)
-	print(dialog_state)
 	for j in range(num_of_text_options):
 		var i = data[j]
 		match i:

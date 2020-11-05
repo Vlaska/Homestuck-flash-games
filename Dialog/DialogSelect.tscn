@@ -36,54 +36,5 @@ visible = false
 position = Vector2( 16, 0 )
 texture = ExtResource( 1 )
 centered = false
-
-[node name="TestNodeContainer" type="Control" parent="."]
-visible = false
-margin_left = 4.88346
-margin_top = 10.024
-margin_right = 10.245
-margin_bottom = 28.1045
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TestNodeContainer"]
-margin_right = 218.0
-margin_bottom = 17.0
-size_flags_horizontal = 0
-custom_constants/separation = 10
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="TestNodeContainer/HBoxContainer"]
-margin_right = 8.0
-margin_bottom = 17.0
-text = ">"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TestNodeContainer/HBoxContainer"]
-margin_left = 18.0
-margin_right = 218.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 200, 0 )
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="TestNodeContainer"]
-visible = false
-margin_top = 21.0
-margin_right = 218.0
-margin_bottom = 38.0
-size_flags_horizontal = 0
-custom_constants/separation = 10
-
-[node name="Label" type="Label" parent="TestNodeContainer/HBoxContainer2"]
-margin_right = 8.0
-margin_bottom = 17.0
-text = ">"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TestNodeContainer/HBoxContainer2"]
-margin_left = 18.0
-margin_right = 218.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 200, 0 )
-bbcode_enabled = true
-bbcode_text = "dghfndtjfdfdgedrf"
-text = "dghfndtjfdfdgedrf"
 [connection signal="mouse_entered" from="." to="." method="_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_mouse_exited"]

@@ -64,10 +64,15 @@
                 [177.955292, 37.910416]
             ]
         },
-        "conAir": {
+        "posters": {
             "offset": [0, 0],
             "pos": [-344.15, -415.5],
             "sprite": "res://Objects/Graphics/JohnsRoom/142.png",
+            "prompts": [],
+            "collisions": []
+        },
+        "conAir": {
+            "parent": "posters",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMCONAIR_0",
@@ -81,9 +86,7 @@
             ]
         },
         "littlMonster": {
-            "offset": [-774.65, -381.1],
-            "pos": [0, 0],
-            "sprite": "res://Objects/Graphics/JohnsRoom/146.png",
+            "parent": "posters",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMMONSTERS_0",
@@ -97,9 +100,7 @@
             ]
         },
         "ghostbusters2": {
-            "offset": [-774.65, -381.1],
-            "pos": [0, 0],
-            "sprite": "res://Objects/Graphics/JohnsRoom/146.png",
+            "parent": "posters",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMGHOSTBUSTERS_0",
@@ -114,9 +115,7 @@
             ]
         },
         "macAndMe": {
-            "offset": [-774.65, -381.1],
-            "pos": [0, 0],
-            "sprite": "res://Objects/Graphics/JohnsRoom/146.png",
+            "parent": "posters",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMMACNME_0",
@@ -154,9 +153,7 @@
             ]
         },
         "door": {
-            "offset": [0, 0],
-            "pos": [-341.15, -419.35],
-            "sprite": "res://Objects/Graphics/JohnsRoom/147.png",
+            "parent": "bed",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMBEDDOOR_0",
@@ -175,9 +172,7 @@
             ]
         },
         "box": {
-            "offset": [0, 0],
-            "pos": [-341.15, -419.35],
-            "sprite": "res://Objects/Graphics/JohnsRoom/147.png",
+            "parent": "bed",
             "prompts": [{
                 "action": "dialog",
                 "id": "ROOMBOX_0",

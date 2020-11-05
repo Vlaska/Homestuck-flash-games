@@ -1,17 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/LivingRoom/214.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/LivingRoom/175.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Graphics/MainRoom/stairs.png" type="Texture" id=4]
+[ext_resource path="res://Objects/Graphics/LivingRoom/stairs.png" type="Texture" id=4]
 [ext_resource path="res://Rooms/ChangeCameraFollowTarget.tscn" type="PackedScene" id=5]
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 6.47768, -496.983, -108.402, -536.319, 24.8317, -579.451, 618.585, -422.523, 333.9, 62.0763, 52.782, 57.6393, -32.2469, 24.8638, 204.277, -72.3784, 410.233, 10.7174, 59.2723, -402.625, -55.7743, -456.171, 17.5816, -484.856, 189.753, -456.093, 925.223, -17.1071, 1067.76, 46.7149, 952.254, 103.863, -122.431, 325.864, -332.662, 233.199, -177.792, 145.297, -143.96, 160.477, 22.5186, 241.136, 491.747, 353.959, 298.725, 524.671, 151.559, 450.003, 282.707, 378.923, 475.472, 349.049, -128.384, 161.965, -108.661, 157.089, 43.9795, 81.4249, 34.821, 235.58, 17.4982, -488.61, 214.625, -457.264, 902.031, 224.749, 301.25, 238, 301.25, 230.5, 326.765, 72.0359, 52.782, 71.8732, 47.6194, 238.854, 544.012, 339.367, 540.715, 333.895, 221, 232.5, 328.92, 80.509, 246.5, 216.25, 543.03, 344.699, 534.822, 350.171, 519.879, 353.749, 468.246, 343.506, 285.333, 367.335, 295, 248.5, 468.597, 337.052, 280.075, 358.306, 263.25, 268, 228.25, 252.5, 221.75, 242.75, 532.577, 328.353, 518.336, 324.775, 493.992, 327.371, 477.647, 331.65, 242.25, 262, 565.498, 176.166, 635.364, 147.253, 698.021, 177.727, 749.751, 166.652, 799.353, 46.3303, 820.708, 37.1276, 293.5, 223.5, 535.768, 176.612, 551.228, 178.321, 729.981, 174.308, 742.616, 165.983, 272.75, 218.25, 366.901, 105.557, 716.974, 178.321, 512.759, -371.148, 201.171, -457.825 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15 ), PoolIntArray( 16, 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24, 25 ), PoolIntArray( 20, 19, 26 ), PoolIntArray( 20, 26, 27 ), PoolIntArray( 20, 27, 28, 29 ), PoolIntArray( 30, 0, 3 ), PoolIntArray( 11, 30, 3, 31 ), PoolIntArray( 32, 33, 34 ), PoolIntArray( 5, 4, 35, 36 ), PoolIntArray( 37, 29, 28 ), PoolIntArray( 32, 38, 39 ), PoolIntArray( 40, 36, 35, 41, 42 ), PoolIntArray( 43, 38, 32 ), PoolIntArray( 43, 32, 22, 44 ), PoolIntArray( 45, 44, 22 ), PoolIntArray( 21, 45, 22 ), PoolIntArray( 46, 25, 24, 47 ), PoolIntArray( 48, 49, 46, 47, 50, 51 ), PoolIntArray( 52, 50, 37, 28, 36, 53 ), PoolIntArray( 48, 33, 32, 54, 55 ), PoolIntArray( 32, 39, 54 ), PoolIntArray( 48, 55, 56 ), PoolIntArray( 48, 56, 57 ), PoolIntArray( 48, 57, 49 ), PoolIntArray( 58, 51, 50 ), PoolIntArray( 59, 60, 61 ), PoolIntArray( 62, 63, 64 ), PoolIntArray( 32, 34, 65, 66, 67 ), PoolIntArray( 68, 69, 62, 32 ), PoolIntArray( 13, 15, 32, 62, 64 ), PoolIntArray( 52, 58, 50 ), PoolIntArray( 40, 53, 36 ), PoolIntArray( 70, 42, 41, 71 ), PoolIntArray( 65, 70, 71, 66 ), PoolIntArray( 32, 67, 59, 61, 72 ), PoolIntArray( 32, 72, 68 ), PoolIntArray( 3, 13, 64, 73 ), PoolIntArray( 3, 73, 31 ), PoolIntArray( 11, 31, 74 ), PoolIntArray( 11, 74, 12 ) ]
-outlines = [ PoolVector2Array( 204.277, -72.3784, -32.2469, 24.8638, 52.782, 57.6393, 52.782, 71.8732, 43.9795, 81.4249, -108.661, 157.089, -128.384, 161.965, -143.96, 160.477, -177.792, 145.297, -332.662, 233.199, -122.431, 325.864, 22.5186, 241.136, 34.821, 235.58, 47.6194, 238.854, 280.075, 358.306, 285.333, 367.335, 282.707, 378.923, 151.559, 450.003, 298.725, 524.671, 902.031, 224.749, 952.254, 103.863, 1067.76, 46.7149, 925.223, -17.1071, 618.585, -422.523, 24.8317, -579.451, -108.402, -536.319, 6.47768, -496.983, 17.4982, -488.61, 17.5816, -484.856, -55.7743, -456.171, 59.2723, -402.625, 189.753, -456.093, 201.171, -457.825, 214.625, -457.264, 512.759, -371.148, 820.708, 37.1276, 799.353, 46.3303, 749.751, 166.652, 742.616, 165.983, 729.981, 174.308, 716.974, 178.321, 698.021, 177.727, 635.364, 147.253, 565.498, 176.166, 551.228, 178.321, 535.768, 176.612, 366.901, 105.557, 328.92, 80.509, 326.765, 72.0359, 333.9, 62.0763, 410.233, 10.7174 ), PoolVector2Array( 246.5, 216.25, 272.75, 218.25, 293.5, 223.5, 301.25, 230.5, 301.25, 238, 295, 248.5, 263.25, 268, 242.25, 262, 228.25, 252.5, 221.75, 242.75, 221, 232.5 ), PoolVector2Array( 518.336, 324.775, 493.992, 327.371, 477.647, 331.65, 468.597, 337.052, 468.246, 343.506, 475.472, 349.049, 491.747, 353.959, 519.879, 353.749, 534.822, 350.171, 543.03, 344.699, 544.012, 339.367, 540.715, 333.895, 532.577, 328.353 ) ]
-
 [node name="RoomBase" instance=ExtResource( 1 )]
+cameraHorizontalLimits = Vector2( -436, 1068 )
 objects_data_path = "res://Objects/Data/LivingRoom.json"
 room_name = "livingRoom"
 
@@ -31,23 +27,20 @@ polygon = PoolVector2Array( 246.069, 216.763, 271.525, 218.001, 293.091, 223.481
 texture = ExtResource( 3 )
 offset = Vector2( -485.05, -1067.2 )
 
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )
-
-[node name="stairs" type="Sprite" parent="." index="4"]
+[node name="stairs" type="Sprite" parent="." index="3"]
 position = Vector2( -54.05, -486 )
 z_index = 1
 texture = ExtResource( 4 )
 centered = false
 
-[node name="214" type="Sprite" parent="." index="5"]
+[node name="214" type="Sprite" parent="." index="4"]
 visible = false
 position = Vector2( -518.61, -539.465 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( 98.7, -38.4 )
 
-[node name="ChangeCameraFollowTarget" parent="." index="6" instance=ExtResource( 5 )]
+[node name="ChangeCameraFollowTarget" parent="." index="5" instance=ExtResource( 5 )]
 position_to_follow = Vector2( -50, -480 )
 
 [node name="CollisionPolygon2D" parent="ChangeCameraFollowTarget" index="0"]

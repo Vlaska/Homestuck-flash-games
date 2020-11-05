@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/StudyRoom/269.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/StudyRoom/246.png" type="Texture" id=3]
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 190.268, 395.625, 5.34259, 488.228, -363.667, 325.892, 37.9642, 143.842, 136.18, 180.533, 374.282, 84.2114, 805.728, 231.885, 678.259, 310.738, 683.731, 340.484, 834, 413.163, 547.702, 560.135, 220.505, 392.257, 152.034, 184.251, 207.035, 389.311, 171.327, 180.533, 675.312, 327.856 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 0, 4, 12, 13 ), PoolIntArray( 13, 12, 14 ), PoolIntArray( 5, 15, 8, 11, 13, 14 ), PoolIntArray( 15, 5, 7 ) ]
-outlines = [ PoolVector2Array( 37.9642, 143.842, -363.667, 325.892, 5.34259, 488.228, 190.268, 395.625, 207.035, 389.311, 220.505, 392.257, 547.702, 560.135, 834, 413.163, 683.731, 340.484, 675.312, 327.856, 678.259, 310.738, 805.728, 231.885, 374.282, 84.2114, 171.327, 180.533, 152.034, 184.251, 136.18, 180.533 ) ]
-
 [node name="RoomBase" instance=ExtResource( 1 )]
+cameraHorizontalLimits = Vector2( -358, 1022 )
 objects_data_path = "res://Objects/Data/StudyRoom.json"
 room_name = "studyRoom"
 
@@ -23,12 +19,11 @@ polygon = PoolVector2Array( 549.127, 568.233, 548.378, 559.617, 840.173, 409.787
 position = Vector2( -409, -347.35 )
 texture = ExtResource( 3 )
 
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )
-
-[node name="269" type="Sprite" parent="." index="4"]
+[node name="269" type="Sprite" parent="." index="3"]
 visible = false
 position = Vector2( -335.2, 100.2 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -30.7, -14.15 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="." index="4"]

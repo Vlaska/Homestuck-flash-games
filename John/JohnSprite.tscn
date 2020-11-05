@@ -336,7 +336,7 @@ states/Walk/node = SubResource( 20 )
 states/Walk/position = Vector2( 718, 159 )
 transitions = [ "Still", "Walk", SubResource( 21 ), "Walk", "Still", SubResource( 22 ), "Still", "TricksterStill", SubResource( 23 ), "TricksterStill", "Still", SubResource( 24 ), "Still", "TricksterWalk", SubResource( 25 ), "TricksterWalk", "Still", SubResource( 26 ), "Walk", "TricksterStill", SubResource( 27 ), "TricksterStill", "Walk", SubResource( 28 ), "TricksterStill", "TricksterWalk", SubResource( 29 ), "TricksterWalk", "TricksterStill", SubResource( 30 ), "TricksterWalk", "Walk", SubResource( 31 ), "Walk", "TricksterWalk", SubResource( 32 ) ]
 start_node = "Still"
-graph_offset = Vector2( -217, -72 )
+graph_offset = Vector2( -109, 99 )
 
 [sub_resource type="AnimationNodeBlendTree" id=34]
 graph_offset = Vector2( 74, -95 )
@@ -348,9 +348,9 @@ node_connections = [ "output", 0, "State" ]
 [sub_resource type="AnimationNodeStateMachinePlayback" id=35]
 
 [node name="JohnSprite" type="Sprite"]
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 centered = false
-offset = Vector2( -53.65, -210.15 )
+offset = Vector2( -54.65, -204.15 )
 __meta__ = {
 "_edit_vertical_guides_": [ -3.14813 ]
 }

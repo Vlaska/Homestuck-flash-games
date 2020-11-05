@@ -3,7 +3,6 @@ extends Node2D
 # export(bool) var check_player = false
 
 var player_clicked: bool = false
-var sprite_clicked: bool = false
 var mouse_in_text_select: bool = false
 var mouse_in_dialog_box: bool = false
 var active = false
@@ -18,18 +17,23 @@ onready var splashscreen = get_node("/root/MainScene/StaticHud/Splashscreen")
 onready var dpad = get_node("/root/MainScene/StaticHudWholeScreen/DPad")
 onready var interact_button = get_node("/root/MainScene/StaticHudWholeScreen/InteractButton")
 onready var static_hud = get_node("/root/MainScene/StaticHudWholeScreen")
+onready var game_info_button = get_node("/root/MainScene/StaticHudWholeScreen/GameInfoDialog")
+onready var audio_player = $Audio
 var click_position: Vector2 = Vector2.ZERO
 var dialog_select = null
-var input_handled = false
 var is_mobile: bool = false
 var font_size: int = 14
+var last_clicked_object = null
 
+var disable_audio: bool = false setget set_disable_audio
 export(float) var change_state_input_delay: float = 0.5
 var timer: float = 0.0
 
-enum GAME_STATE { INTERACT, SELECT_DIALOG, DIALOG, SPLASHSCREEN, CHANGE_ROOM }
+var num_interactive_elements_under_mouse: int = 0
 
-var game_state = GAME_STATE.INTERACT setget set_game_state, get_game_state
+enum GAME_STATE { INTERACT, SELECT_DIALOG, DIALOG, SPLASHSCREEN, CHANGE_ROOM, LOADING }
+
+var game_state = GAME_STATE.LOADING setget set_game_state, get_game_state
 
 
 func set_game_state(value):
@@ -51,23 +55,58 @@ func get_game_state():
 	return game_state
 
 
+func set_disable_audio(value: bool):
+	disable_audio = value
+	if value:
+		pause_audio()
+	else:
+		play_audio()
+
+
+func set_audio(path: String):
+	audio_player.stream = load(path)
+	audio_player.play()
+	if not disable_audio:
+		audio_player.stream_paused = false
+
+
+func play_audio():
+	audio_player.stream_paused = false
+
+
+func pause_audio():
+	audio_player.stream_paused = true
+
+
+func remove_audio():
+	audio_player.stop()
+	audio_player.stream = null
+
+
 func _ready():
 	var device_type = OS.get_name().to_lower()
 	if OS.has_feature("JavaScript"):
 		is_mobile = JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)")
-		if is_mobile:
-			font_size = 24
 	elif device_type == 'android' or device_type == 'ios':
 		is_mobile = true
-		font_size = 24
+	# if is_mobile:
+	# 	font_size = 24
 	InputManager.connect("single_tap", self, "_input")
+	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/MouseCursor.png"), Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/HandCursor.png"), Input.CURSOR_POINTING_HAND)
+	decrease_num_interactive_elements_under_mouse()
 
 
 func open_dialog_box(dialog_id: String, num_of_pages: int):
 	self.dialog_box.open_dialog_box(dialog_id, num_of_pages)
+	if last_clicked_object:
+		last_clicked_object.dialog_box_opened()
+		last_clicked_object = null
 
 
 func change_room(scene: String, spawn: String):
+	num_interactive_elements_under_mouse = 0
+	decrease_num_interactive_elements_under_mouse()
 	self.world.load_room(scene, spawn)
 
 
@@ -104,12 +143,30 @@ func _process(delta):
 	timer += delta
 
 
+func increase_num_interactive_elements_under_mouse():
+	match game_state:
+		GAME_STATE.LOADING, GAME_STATE.CHANGE_ROOM:
+			return
+	num_interactive_elements_under_mouse += 1
+	if num_interactive_elements_under_mouse > 0:
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	
+func decrease_num_interactive_elements_under_mouse():
+	match game_state:
+		GAME_STATE.LOADING, GAME_STATE.CHANGE_ROOM:
+			return
+	num_interactive_elements_under_mouse -= 1
+	if num_interactive_elements_under_mouse <= 0:
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+		num_interactive_elements_under_mouse = 0
+
+
 func _input(event: InputEvent):
 	if not self.active or timer < change_state_input_delay:
 		return
 	match self.game_state:
 		GAME_STATE.INTERACT:
-			# print(event.to_string())
+			last_clicked_object = null
 			if not self.is_mouse_click_or_touch_tap_event(event) or dialog_box.closing_dialog_box:
 				return
 
@@ -117,6 +174,10 @@ func _input(event: InputEvent):
 			click_position = get_global_mouse_position() if not is_touch_tap(event) else get_canvas_transform().xform_inv(event.position)
 			
 			if is_mobile and (dpad.pos_in_collision(event.position) or interact_button.pos_in_collision(event.position)):
+				return
+
+			if game_info_button.pos_in_collision(event.position):
+				game_info_button.clicked()
 				return
 
 			var space_state = get_world_2d().direct_space_state
@@ -131,7 +192,10 @@ func _input(event: InputEvent):
 				or not interactables[-1]["collider"].get_parent().is_in_group("interactable")
 			):
 				return
-			interactables[-1]["collider"].get_parent().clicked()
+			var clicked_object = interactables[-1]["collider"].get_parent()
+			if clicked_object.has_method("dialog_box_opened"):
+				last_clicked_object = clicked_object
+			clicked_object.clicked()
 
 		GAME_STATE.SELECT_DIALOG:
 			if self.is_mouse_click(event):

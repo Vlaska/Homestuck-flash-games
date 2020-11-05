@@ -163,9 +163,7 @@
             ]
         },
         "plant": {
-            "offset": [-218.1, -446.7],
-            "pos": [-43.6, 551.65],
-            "sprite": "res://Objects/Graphics/Kitchen/280.png",
+            "parent": "table",
             "prompts": [{
               "action": "dialog",
               "id": "KITCHPLANT_0",
@@ -188,9 +186,7 @@
             ]
         },
         "book": {
-            "offset": [-218.1, -446.7],
-            "pos": [-43.6, 551.65],
-            "sprite": "res://Objects/Graphics/Kitchen/280.png",
+            "parent": "table",
             "prompts": [{
               "action": "dialog",
               "id": "KITCHBOOK_0",
@@ -206,9 +202,7 @@
             ]
         },
         "betty": {
-            "offset": [-218.1, -446.7],
-            "pos": [-374.85, -60.2],
-            "sprite": "res://Objects/Graphics/Kitchen/278.png",
+            "parent": "kitchenette",
             "prompts": [{
               "action": "dialog",
               "id": "KITCHBETTY_0",

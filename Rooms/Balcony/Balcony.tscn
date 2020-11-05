@@ -1,22 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/Graphics/Balcony/112.png" type="Texture" id=2]
-[ext_resource path="res://Objects/Graphics/Balcony/118.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Graphics/Balcony/110.png" type="Texture" id=4]
-[ext_resource path="res://Objects/Graphics/Balcony/116.png" type="Texture" id=5]
-[ext_resource path="res://Objects/Graphics/Balcony/114.png" type="Texture" id=6]
 [ext_resource path="res://Rooms/Balcony/109.png" type="Texture" id=7]
-
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 1067.06, 85.8682, 1336.43, 208.236, 923.242, 408.342, 645.205, 308.27, 831.948, 452.59, 386.176, 443.019, -6.71011, 256.821, 109.574, 196.185, 620.705, 564.626, 557.674, 528.099, 635.405, 307.602, 220.95, 136.855, 248.978, 122.295 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4 ), PoolIntArray( 5, 6, 7 ), PoolIntArray( 3, 4, 8, 9, 10 ), PoolIntArray( 5, 7, 11, 12, 10, 9 ) ]
-outlines = [ PoolVector2Array( 1336.43, 208.236, 1067.06, 85.8682, 645.205, 308.27, 635.405, 307.602, 248.978, 122.295, 220.95, 136.855, 109.574, 196.185, -6.71011, 256.821, 386.176, 443.019, 557.674, 528.099, 620.705, 564.626, 831.948, 452.59, 923.242, 408.342 ) ]
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 cameraHorizontalLimits = Vector2( -232, 1559 )
 objects_data_path = "res://Objects/Data/Balcony.json"
 room_name = "balcony"
+audio_file = "res://Sound/wind.ogg"
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="0"]
 polygon = PoolVector2Array( 259.083, 116.562, -6.60312, 257.359, 161.911, 337.206, 385.232, 443.039, 558.629, 529.029, 620.05, 564.622, 839.6, 448.698, 1336.39, 208.27, 1054.88, 80.4761, 1131.4, 47.5261, 1394.35, 206.347, 611.857, 594.408, -35.4117, 260.66, 250.39, 96.9703 )
@@ -27,40 +18,3 @@ polygon = PoolVector2Array( 248.911, 121.869, 305.263, 85.3591, 1066.03, 86.5496
 [node name="Background" parent="." index="1"]
 texture = ExtResource( 7 )
 offset = Vector2( -282.2, -739.85 )
-
-[node name="Objects-old" type="YSort" parent="." index="3"]
-
-[node name="Floor" type="Sprite" parent="Objects-old" index="0"]
-visible = false
-position = Vector2( 0, -0.749161 )
-texture = ExtResource( 3 )
-centered = false
-offset = Vector2( -6.1, 86.95 )
-
-[node name="Alchemiter" type="Sprite" parent="Objects-old" index="1"]
-visible = false
-texture = ExtResource( 2 )
-centered = false
-offset = Vector2( 155.05, -530.75 )
-
-[node name="Totem" type="Sprite" parent="Objects-old" index="2"]
-visible = false
-texture = ExtResource( 6 )
-centered = false
-offset = Vector2( 322.05, -169.05 )
-
-[node name="Door" type="Sprite" parent="Objects-old" index="3"]
-visible = false
-texture = ExtResource( 4 )
-centered = false
-offset = Vector2( -8.2, -409.85 )
-
-[node name="Railing" type="Sprite" parent="Objects-old" index="4"]
-visible = false
-position = Vector2( -90.5, 618.7 )
-texture = ExtResource( 5 )
-centered = false
-offset = Vector2( -28.7, -547.75 )
-
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )

@@ -3,13 +3,15 @@ extends Node2D
 
 onready var camera = $Camera
 onready var john = $Scene/Player/John
-onready var objects = $Scene/Room/Objects.get_children()
 onready var staticHud = $StaticHud
 onready var display_width = ProjectSettings.get("display/window/size/width")
 onready var fps_label = $StaticHudWholeScreen/FPS
+var objects
 
 export(String, FILE, "*.json") var room_list_path
 export(bool) var dialog_active = true setget set_dialog_active, get_dialog_active
+
+onready var transition_effect = $StaticHudWholeScreen/RoomTransition/AnimationPlayer
 
 const mapList = [
 	"res://Rooms/Balcony/Balcony.tscn",
@@ -76,6 +78,7 @@ func load_maps_data():
 
 
 func _ready():
+	transition_effect.play("HideBg")
 	get_viewport().connect("size_changed", self, "offset_static_hud")
 	offset_static_hud()
 	WorldController.active = dialog_active
@@ -92,12 +95,13 @@ func _process(_delta):
 
 
 func sort_objects():
-	var john_position = john.position.y
-	for i in objects:
-		if i.position.y <= john_position:
-			i.z_index = 0
-		else:
-			i.z_index = 1
+	if objects:
+		var john_position = john.position.y
+		for i in objects:
+			if i.position.y <= john_position:
+				i.z_index = 0
+			else:
+				i.z_index = 1
 
 
 func offset_static_hud():
@@ -110,6 +114,7 @@ func change_map():
 	var old_room = $Scene/Room
 	if old_room:
 		scene.remove_child(old_room)
+		old_room.queue_free()
 	var new_room = load(rooms[new_room_name]).instance()
 	new_room.name = "Room"
 	scene.add_child(new_room)
@@ -122,13 +127,13 @@ func change_map():
 
 
 func start_changing_room():
-	$StaticHudWholeScreen/RoomTransition/AnimationPlayer.play("FadeIn")
+	transition_effect.play("FadeIn")
 	WorldController.game_state = WorldController.GAME_STATE.CHANGE_ROOM
 	
 	
 func change_room():
 	change_map()
-	$StaticHudWholeScreen/RoomTransition/AnimationPlayer.play("FadeOut")
+	transition_effect.play("FadeOut")
 
 
 func load_room(room_name, spawn):

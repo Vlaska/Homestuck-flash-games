@@ -6,8 +6,10 @@ export(Vector2) var cameraVerticalLimits = Vector2(-10000000.0, 10000000.0)
 export(Vector2) var cameraZoom = Vector2(1, 1)
 export(String, FILE, "*.json") var objects_data_path = ""
 export(String) var room_name = ""
+export(String, FILE, "*.ogg,*.wav") var audio_file = ""
 
-var ObjectBase = preload("res://Objects/ObjectBase.tscn")
+const ObjectBase = preload("res://Objects/ObjectBase.tscn")
+const ObjectBaseWithoutSprite = preload("res://Objects/ObjectBaseWithoutSprite.tscn")
 
 onready var object_container = $Objects
 onready var world_state = get_node("/root/MainScene").world_state
@@ -51,20 +53,38 @@ func _ready():
 	create_objects(objects_data)
 
 
+func set_object_data(obj, data):
+	if "offset" in data:
+		obj.offset = vecFromArray(data["offset"])
+	if "pos" in data:
+		obj.position = vecFromArray(data["pos"])
+	obj.set_collision_position(obj.offset)
+	if "scale" in data:
+		obj.scale = vecFromArray(data["scale"])
+
+
 func create_objects(data: Dictionary):
 	for i in data["objects"]:
-		var object = ObjectBase.instance()
+		var t
 		var ob_data = data["objects"][i]
+		var object
+		if "parent" in ob_data:
+			t = data["objects"][ob_data["parent"]]
+			object = ObjectBaseWithoutSprite.instance()
+		else:
+			t = ob_data
+			object = ObjectBase.instance()
+		if "script" in ob_data:
+			var script = load(ob_data["script"])
+			if script:
+				object.set_script(script)
 		object.init(world_state[room_name]["objects"], i, ob_data)
-		if "offset" in ob_data:
-			object.offset = vecFromArray(ob_data["offset"])
-		if "pos" in ob_data:
-			object.position = vecFromArray(ob_data["pos"])
-		object.set_collision_position(object.offset)
-		if "scale" in ob_data:
-			object.scale = vecFromArray(ob_data["scale"])
+		set_object_data(object, t)
 		self.object_container.add_child(object)
 
 
 func on_load():
-	pass
+	if self.audio_file:
+		WorldController.set_audio(self.audio_file)
+	else:
+		WorldController.remove_audio()

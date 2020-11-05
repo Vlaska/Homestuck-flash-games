@@ -1,4 +1,4 @@
-extends "res://Objects/ObjectBase.gd"
+extends "res://Objects/Scripts/ObjectBase.gd"
 
 
 onready var shape = $CollisionArea/Shape

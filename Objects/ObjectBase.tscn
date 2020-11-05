@@ -13,3 +13,5 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="Shape" type="CollisionPolygon2D" parent="CollisionArea"]
+[connection signal="mouse_entered" from="CollisionArea" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="CollisionArea" to="." method="_mouse_exited"]

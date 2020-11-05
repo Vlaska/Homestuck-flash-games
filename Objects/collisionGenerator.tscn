@@ -3,7 +3,6 @@
 [ext_resource path="res://Objects/collisions.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Scripts/Camera2D2.gd" type="Script" id=2]
 
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D2" type="Camera2D" parent="."]
@@ -13,4 +12,4 @@ spd = 0.2
 zoom_factor = 0.1
 
 [node name="ClickableObject" parent="." instance=ExtResource( 1 )]
-room_data_path = "res://Objects/Data/MainRoom.json"
+room_data_path = "res://Objects/Data/Kitchen.json"

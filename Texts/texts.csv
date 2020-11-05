@@ -369,3 +369,12 @@ OUTSIDE_SECRET_1,this is not SAFE,to nie jest BEZPIECZNE
 OUTSIDE_SECRET_2,Gankra Was Not Here,Gankra tu nie było
 CLOSE_DIALOG_SELECT,Close,Zamknij
 TRICKSTER_TAP,Tap Here,Tapnij Tutaj
+GAME_INFO_PRESS_HERE,PRESS THIS!,NACIŚNIJ TUTAJ!
+GAME_INFO_TAP_HERE,TAP HERE!,TAPNIJ TUTAJ!
+GAME_INFO_TEXT_1,"To walk around, use the mouse, arrow keys, or WASD keys. Click on various objects to open command menus for them!
+
+Outstanding Flash programming by Alexis 'Gankra' Beingessner.
+Port created by 'Vlaska'.","Aby się poruszać, użyj myszy, klawiszy strzałek lub klawiszy WASD. Klikaj na rożne obiekty, aby otworzyć dla nich menu komend!
+
+""Przewspaniałe"" programowanie Flash autorstwa Alexis ""Gankra"" Beingessner.
+Port stworzony przez Vlaska."

@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Rooms/RoomBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Laundry/293.png" type="Texture" id=2]
 [ext_resource path="res://Rooms/Laundry/300.png" type="Texture" id=3]
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 422.861, 60.8518, 557.281, 111.574, 493.448, 142.828, 203.685, 105.482, 467.491, 166.136, 622.173, 235.531, 301.155, 393.258, -51.9107, 229.571, 174.682, 77.141, 134.952, 55.9518, 167.266, 29.0679, 199.182, 10.3949, 232.025, -3.9079, 468.815, 158.72, 203.817, 100.449, 200.639, 94.6221 )
-polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 0, 2, 13, 3, 14 ), PoolIntArray( 13, 4, 3 ), PoolIntArray( 12, 14, 15, 11 ), PoolIntArray( 11, 15, 8 ) ]
-outlines = [ PoolVector2Array( -51.9107, 229.571, 301.155, 393.258, 622.173, 235.531, 467.491, 166.136, 468.815, 158.72, 493.448, 142.828, 557.281, 111.574, 422.861, 60.8518, 232.025, -3.9079, 199.182, 10.3949, 167.266, 29.0679, 134.952, 55.9518, 174.682, 77.141, 200.639, 94.6221, 203.817, 100.449, 203.685, 105.482 ) ]
-
 [node name="RoomBase" instance=ExtResource( 1 )]
+cameraHorizontalLimits = Vector2( -170, 726 )
 objects_data_path = "res://Objects/Data/Laundry.json"
 room_name = "laundry"
 
@@ -23,10 +19,7 @@ polygon = PoolVector2Array( 133.01, 57.4019, 166.912, 29.1937, 199.623, 10.3883,
 position = Vector2( -221.2, -420.65 )
 texture = ExtResource( 2 )
 
-[node name="NavigationPolygonInstance" parent="WalkableSpace" index="0"]
-navpoly = SubResource( 1 )
-
-[node name="300" type="Sprite" parent="." index="4"]
+[node name="300" type="Sprite" parent="." index="3"]
 visible = false
 position = Vector2( -39.2, 1 )
 texture = ExtResource( 3 )

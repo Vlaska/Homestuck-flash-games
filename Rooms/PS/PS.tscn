@@ -8,6 +8,7 @@
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
+cameraHorizontalLimits = Vector2( -79, 1006 )
 objects_data_path = "res://Objects/Data/PS.json"
 room_name = "PS"
 

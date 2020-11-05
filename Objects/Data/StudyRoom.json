@@ -6,10 +6,10 @@
             "pos": [558, -204.3],
             "sprite": "res://Objects/Graphics/StudyRoom/247.png",
             "prompts": [{
-              "action": "splashscreen",
-              "path": "res://Objects/Graphics/StudyRoom/52.png",
-              "id": "STUDYWINDOW_0",
-              "num_of_pages": 1
+                "action": "splashscreen",
+                "path": "res://Objects/Graphics/StudyRoom/52.png",
+                "id": "STUDYWINDOW_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [179.080948, 38.225739],
@@ -27,9 +27,9 @@
             "pos": [-320.85, -285.3],
             "sprite": "res://Objects/Graphics/StudyRoom/250.png",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYMURAL_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYMURAL_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [-0.56797, 186.408554],
@@ -43,9 +43,9 @@
             "pos": [-263.5, 240.35],
             "sprite": "res://Objects/Graphics/StudyRoom/252.png",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYCARDS_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYCARDS_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [-18.695908, 50.536919],
@@ -62,9 +62,9 @@
             "pos": [798.7, -162.5],
             "sprite": "res://Objects/Graphics/StudyRoom/255.png",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYPIC2_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYPIC2_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [0.190598, -3.000626],
@@ -77,10 +77,12 @@
             "offset": [0, 0],
             "pos": [49.95, -245.55],
             "sprite": "res://Objects/Graphics/StudyRoom/257.png",
+            "script": "res://Objects/Scripts/Piano.gd",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYPIANO_0",
-              "num_of_pages": 1
+                "action": "splashscreen",
+                "path": "res://Objects/Graphics/StudyRoom/50.png",
+                "id": "STUDYPIANO_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [229.253311, 118.765274],
@@ -113,9 +115,9 @@
             "pos": [381.15, -201.3],
             "sprite": "res://Objects/Graphics/StudyRoom/260.png",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYPIC1_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYPIC1_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [-0.982925, 10.995621],
@@ -130,10 +132,10 @@
             "pos": [-413.05, 345.35],
             "sprite": "res://Objects/Graphics/StudyRoom/261.png",
             "prompts": [{
-              "action": "change_scene",
-              "scene": "livingRoom",
-              "spawn": "studyRoom",
-              "id": "STUDYDOOR_0"
+                "action": "change_scene",
+                "scene": "livingRoom",
+                "spawn": "studyRoom",
+                "id": "STUDYDOOR_0"
             }],
             "collisions": [
                 [60.195328, -6.079468],
@@ -145,13 +147,11 @@
             ]
         },
         "joker": {
-            "offset": [0, 0],
-            "pos": [49.95, -245.55],
-            "sprite": "res://Objects/Graphics/StudyRoom/257.png",
+            "parent": "piano",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYJOKER_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYJOKER_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [225.952728, 137.635925],
@@ -164,13 +164,11 @@
             ]
         },
         "clown1": {
-            "offset": [0, 0],
-            "pos": [49.95, -245.55],
-            "sprite": "res://Objects/Graphics/StudyRoom/257.png",
+            "parent": "piano",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYCLOWN1_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYCLOWN1_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [119.043243, 174.835236],
@@ -182,13 +180,11 @@
             ]
         },
         "pipe": {
-            "offset": [0, 0],
-            "pos": [49.95, -245.55],
-            "sprite": "res://Objects/Graphics/StudyRoom/257.png",
+            "parent": "piano",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYPIPE_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYPIPE_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [19.107635, 166.15799],
@@ -202,9 +198,9 @@
             "pos": [679.05, 325.8],
             "sprite": "res://Objects/Graphics/StudyRoom/264.png",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYSAFE_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYSAFE_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [1.424866, 155.384399],
@@ -218,13 +214,11 @@
             ]
         },
         "clown2": {
-            "offset": [0.8, -351.6],
-            "pos": [679.05, 325.8],
-            "sprite": "res://Objects/Graphics/StudyRoom/264.png",
+            "parent": "safe",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYCLOWN2_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYCLOWN2_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [75.407867, -9.674862],
@@ -236,14 +230,19 @@
                 [141.057617, 10.042812]
             ]
         },
-        "can": {
+        "desk": {
             "offset": [-182.5, -466.3],
             "pos": [204.9, 609.45],
             "sprite": "res://Objects/Graphics/StudyRoom/267.png",
+            "prompts": [],
+            "collisions": []
+        },
+        "can": {
+            "parent": "desk",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYCAN_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYCAN_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [16.64888, 134.26973],
@@ -256,14 +255,12 @@
             ]
         },
         "magazine": {
-            "offset": [-182.5, -466.3],
-            "pos": [204.9, 609.45],
-            "sprite": "res://Objects/Graphics/StudyRoom/267.png",
+            "parent": "desk",
             "prompts": [{
-              "action": "splashscreen",
-              "path": "res://Objects/Graphics/StudyRoom/54.png",
-              "id": "STUDYMAGAZINE_0",
-              "num_of_pages": 1
+                "action": "splashscreen",
+                "path": "res://Objects/Graphics/StudyRoom/54.png",
+                "id": "STUDYMAGAZINE_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [269.631256, 173.883453],
@@ -276,13 +273,11 @@
             ]
         },
         "rack": {
-            "offset": [-182.5, -466.3],
-            "pos": [204.9, 609.45],
-            "sprite": "res://Objects/Graphics/StudyRoom/267.png",
+            "parent": "desk",
             "prompts": [{
-              "action": "dialog",
-              "id": "STUDYRACK_0",
-              "num_of_pages": 1
+                "action": "dialog",
+                "id": "STUDYRACK_0",
+                "num_of_pages": 1
             }],
             "collisions": [
                 [343.31604, 445.371094],
@@ -306,13 +301,6 @@
                 [377.157166, 409.241455],
                 [350.328186, 424.944458]
             ]
-        },
-        "desk": {
-            "offset": [-182.5, -466.3],
-            "pos": [204.9, 609.45],
-            "sprite": "res://Objects/Graphics/StudyRoom/267.png",
-            "prompts": [],
-            "collisions": []
         }
     },
     "spawns": {

@@ -1,10 +1,10 @@
 {
-    "room_name": "mainRoom",
+    "room_name": "livingRoom",
     "objects": {
         "studyRoomEntrance": {
             "offset": [0, 0],
             "pos": [252.15, -365.8],
-            "sprite": "res://Objects/Graphics/MainRoom/176.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/176.png",
             "prompts": [{
                 "action": "change_scene",
                 "scene": "studyRoom",
@@ -28,7 +28,7 @@
         "kichenDoor": {
             "offset": [0, 0],
             "pos": [34.9, -381.2],
-            "sprite": "res://Objects/Graphics/MainRoom/178.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/178.png",
             "prompts": [{
                 "action": "change_scene",
                 "scene": "kitchen",
@@ -45,7 +45,7 @@
         "balconDoor": {
             "offset": [0, 0],
             "pos": [-375, -834.8],
-            "sprite": "res://Objects/Graphics/MainRoom/180.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/180.png",
             "prompts": [{
                 "action": "change_scene",
                 "scene": "balcony",
@@ -62,7 +62,7 @@
         "johnsRoomDoor": {
             "offset": [0, 0],
             "pos": [-104, -902.05],
-            "sprite": "res://Objects/Graphics/MainRoom/182.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/182.png",
             "prompts": [{
                 "action": "change_scene",
                 "scene": "johnsRoom",
@@ -80,7 +80,7 @@
             "offset": [0, 0],
             "pos": [166.95, -998.2],
             "pos1": [652, 69],
-            "sprite": "res://Objects/Graphics/MainRoom/bathroomCorridorPassage.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/bathroomCorridorPassage.png",
             "prompts": [{
                 "action": "change_scene",
                 "scene": "bathroomCorridor",
@@ -97,7 +97,7 @@
         "photo": {
             "offset": [0, 0],
             "pos": [51.95, -858.5],
-            "sprite": "res://Objects/Graphics/MainRoom/185.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/185.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGBEAGLE_0",
@@ -113,7 +113,7 @@
         "painting1": {
             "offset": [0, 0],
             "pos": [364.9, -897.75],
-            "sprite": "res://Objects/Graphics/MainRoom/188.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/188.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGQUIN1_0",
@@ -129,7 +129,7 @@
         "painting2": {
             "offset": [0, 0],
             "pos": [850, -322.95],
-            "sprite": "res://Objects/Graphics/MainRoom/191.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/191.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGQUIN2_0",
@@ -145,7 +145,7 @@
         "painting3": {
             "offset": [0, 0],
             "pos": [396, -315.3],
-            "sprite": "res://Objects/Graphics/MainRoom/194.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/194.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGQUIN3_0",
@@ -162,7 +162,7 @@
         "painting4": {
             "offset": [0, 0],
             "pos": [-275.9, -265.85],
-            "sprite": "res://Objects/Graphics/MainRoom/197.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/197.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGQUIN4_0",
@@ -178,14 +178,12 @@
         "couch": {
             "offset": [-22.75, -195.95],
             "pos": [332.6, 80.65],
-            "sprite": "res://Objects/Graphics/MainRoom/211.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/211.png",
             "prompts": [],
             "collisions": []
         },
         "lamp": {
-            "offset": [-22.75, -195.95],
-            "pos": [332.6, 80.65],
-            "sprite": "res://Objects/Graphics/MainRoom/211.png",
+            "parent": "couch",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGLAMP_0",
@@ -204,9 +202,7 @@
             ]
         },
         "pie_tin": {
-            "offset": [-22.75, -195.95],
-            "pos": [332.6, 80.65],
-            "sprite": "res://Objects/Graphics/MainRoom/211.png",
+            "parent": "couch",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGPIE_0",
@@ -224,7 +220,7 @@
         "lid": {
             "offset": [-81.35, -186.55],
             "pos": [259.75, 241.5],
-            "sprite": "res://Objects/Graphics/MainRoom/201.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/201.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGLID_0",
@@ -246,14 +242,12 @@
             "offset": [-445.25, -602.35],
             "pos": [43.15, 70.15],
             "pos1": [43.15, 70.15],
-            "sprite": "res://Objects/Graphics/MainRoom/209.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/209.png",
             "prompts": [],
             "collisions": []
         },
         "fireplace": {
-            "offset": [-445.25, -602.35],
-            "pos": [43.15, 70.15],
-            "sprite": "res://Objects/Graphics/MainRoom/209.png",
+            "parent": "leftWall",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGSOOT_0",
@@ -270,9 +264,7 @@
             ]
         },
         "urn": {
-            "offset": [-445.25, -602.35],
-            "pos": [43.15, 70.15],
-            "sprite": "res://Objects/Graphics/MainRoom/209.png",
+            "parent": "leftWall",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGURN_0",
@@ -288,9 +280,7 @@
             ]
         },
         "pokers": {
-            "offset": [-445.25, -602.35],
-            "pos": [43.15, 70.15],
-            "sprite": "res://Objects/Graphics/MainRoom/209.png",
+            "parent": "leftWall",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGPOKERS_0",
@@ -308,9 +298,7 @@
             ]
         },
         "dolls": {
-            "offset": [-445.25, -602.35],
-            "pos": [43.15, 70.15],
-            "sprite": "res://Objects/Graphics/MainRoom/209.png",
+            "parent": "leftWall",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGDOLLS_0",
@@ -330,7 +318,7 @@
         "cruxtuder": {
             "offset": [-212.85, -313.3],
             "pos": [81.75, 385.75],
-            "sprite": "res://Objects/Graphics/MainRoom/199.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/199.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGCRUX_0",
@@ -364,7 +352,7 @@
         "head": {
             "offset": [-36, -104.8],
             "pos": [501.95, 344.2],
-            "sprite": "res://Objects/Graphics/MainRoom/204.png",
+            "sprite": "res://Objects/Graphics/LivingRoom/204.png",
             "prompts": [{
                 "action": "dialog",
                 "id": "LIVINGHEAD_0",

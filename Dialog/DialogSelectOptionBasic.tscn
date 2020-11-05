@@ -6,6 +6,7 @@
 [node name="DialogSelectOptionBasic" type="HBoxContainer"]
 margin_right = 212.0
 margin_bottom = 17.0
+mouse_default_cursor_shape = 2
 size_flags_vertical = 0
 theme = ExtResource( 2 )
 custom_constants/separation = 10
