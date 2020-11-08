@@ -34,14 +34,14 @@
         }
     </style>
     <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="/Export/game.html" allowfullscreen></iframe>
+        <iframe id="game" class="embed-responsive-item" src="/Export/game.html" allowfullscreen></iframe>
     </div>
     <div class="container text-info text-center">
         <button id="goFS">Enter fullscreen</button>
         <script>
             var goFS = document.getElementById("goFS");
             goFS.addEventListener("click", function () {
-                document.body.requestFullscreen();
+                document.getElementById('game').requestFullscreen();
             }, false);
         </script>
         <p>On mobile weirdness of how the game is displayed are caused by ifream (game is embeded from another page). If you want, <a href="./Export/game.html">here is non-embeded version</a> (it looks better on mobile, than this page).</p>
