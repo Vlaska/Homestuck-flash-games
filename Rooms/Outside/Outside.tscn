@@ -75,9 +75,10 @@ position = Vector2( -0.264893, 0 )
 z_index = -1
 script = ExtResource( 15 )
 cameraHorizontalLimits = Vector2( -1303, 2256 )
+cameraHorizontalMobileLimits = Vector2( -1303, 2256 )
 objects_data_path = "res://Objects/Data/Outside.json"
 room_name = "outside"
-audio_file = "res://Sound/wind.ogg"
+audio_name = "wind"
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" index="0"]
 polygon = PoolVector2Array( 1498.5, 619.75, 1479.5, 611, 1455.25, 594.25, 1441.75, 578, 1441.75, 567.25, 1448.5, 562, 1461, 564.5, 1473.5, 574.5, 1473.27, 578.57, 1496.38, 582.908, 1526, 586.5, 1508, 573.25, 1496.5, 568.5, 1484.25, 557, 1480.06, 547.767, 1507.5, 555.75, 1521.32, 557.207, 1546, 558, 1523.53, 548.545, 1518.5, 544.5, 1508.6, 540.701, 1497.75, 531.5, 1489.25, 519.5, 1486.25, 510.5, 1480.5, 504, 1470.95, 506.406, 1420.5, 496.25, 1401.02, 492.476, 1383.25, 492.25, 1334.36, 512.495, 1324.85, 520.755, 1306, 534.5, 1279.09, 550.659, 1268.75, 556.5, 1276.75, 556.5, 1337.5, 547.25, 1353, 547, 1357.05, 549.37, 1356.75, 555.5, 1341.25, 571.5, 1338, 580.25, 1324.25, 592.75, 1306.25, 595.75, 1299.5, 601.75, 1303.25, 603.25, 1326.75, 600.5, 1333, 602.25, 1363.25, 584.75, 1376.5, 571.25, 1389.5, 563.75, 1400.75, 564.25, 1411.45, 571.395, 1409.25, 575, 1420.75, 594.25, 1430.52, 600.903, 1445, 608.25, 1464.25, 623.25, 1468.25, 628 )
@@ -189,6 +190,7 @@ offset = Vector2( -225, 0 )
 autoplay = "Sparks"
 playback_process_mode = 2
 anims/Sparks = SubResource( 1 )
+
 [connection signal="mouse_entered" from="OtherObjects/TricksterModeKeys/Area2D" to="OtherObjects/TricksterModeKeys" method="_mouse_entered"]
 [connection signal="mouse_exited" from="OtherObjects/TricksterModeKeys/Area2D" to="OtherObjects/TricksterModeKeys" method="_mouse_exited"]
 

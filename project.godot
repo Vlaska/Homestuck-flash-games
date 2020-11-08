@@ -89,7 +89,7 @@ window/size/height=450
 window/size/test_width=1300
 window/size/test_height=900
 window/dpi/allow_hidpi=true
-window/handheld/orientation="sensor_landscape"
+window/handheld/orientation="sensor"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 

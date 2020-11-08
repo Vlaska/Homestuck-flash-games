@@ -55,7 +55,7 @@ func move_state(_delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	if (input_vector == Vector2.ZERO):
-		if Input.is_action_pressed("click"):
+		if Input.is_action_pressed("click") and WorldController.has_enough_time_elapsed_since_state_change():
 			input_vector = get_local_mouse_position()
 	input_vector = input_vector.normalized()
 
@@ -107,9 +107,14 @@ func turn_off_trickster_mode():
 	self.set_collision_layer_bit(19, false)
 	prefix_animation_name = ""
 	self.scale.y *= -1
-	audio_player.stream_paused = true
-	audio_player.stop()
-	WorldController.disable_audio = false
+	# audio_player.stream_paused = true
+	# audio_player.stop()
+	# WorldController.disable_audio = false
+	WorldController.get_audio_player("world").stop_audio()
+	var room = WorldController.get_current_room()
+	if room:
+		room.set_audio()
+	# WorldController.
 	
 	
 func turn_on_trickster_mode():
@@ -118,9 +123,10 @@ func turn_on_trickster_mode():
 	self.set_collision_layer_bit(19, true)
 	prefix_animation_name = "Trickster"
 	self.scale.y *= -1
-	audio_player.stream_paused = false
-	audio_player.play()
-	WorldController.disable_audio = true
+	# audio_player.stream_paused = false
+	# audio_player.play()
+	# WorldController.disable_audio = true
+	WorldController.get_audio_player("world").set_audio("trickster")
 
 
 func clicked():

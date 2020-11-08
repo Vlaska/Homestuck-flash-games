@@ -3,16 +3,19 @@ extends Node2D
 
 export(Vector2) var cameraHorizontalLimits = Vector2(-10000000.0, 10000000.0)
 export(Vector2) var cameraVerticalLimits = Vector2(-10000000.0, 10000000.0)
+export(Vector2) var cameraHorizontalMobileLimits = Vector2(-10000000.0, 10000000.0)
+export(Vector2) var cameraVerticalMobileLimits = Vector2(-10000000.0, 10000000.0)
 export(Vector2) var cameraZoom = Vector2(1, 1)
 export(String, FILE, "*.json") var objects_data_path = ""
 export(String) var room_name = ""
-export(String, FILE, "*.ogg,*.wav") var audio_file = ""
+export(String) var audio_name = ""
 
 const ObjectBase = preload("res://Objects/ObjectBase.tscn")
 const ObjectBaseWithoutSprite = preload("res://Objects/ObjectBaseWithoutSprite.tscn")
 
 onready var object_container = $Objects
 onready var world_state = get_node("/root/MainScene").world_state
+onready var audio_player = WorldController.get_audio_player("world")
 var objects_data
 var spawns = {}
 
@@ -23,10 +26,18 @@ func vecFromArray(arr: Array) -> Vector2:
 
 func _ready():
 	var camera = get_node("/root/MainScene/Camera")
-	camera.limit_left = cameraHorizontalLimits.x
-	camera.limit_right = cameraHorizontalLimits.y
-	camera.limit_top = cameraVerticalLimits.x
-	camera.limit_bottom = cameraVerticalLimits.y
+	var limitsH
+	var limitsV
+	if WorldController.is_mobile:
+		limitsH = cameraHorizontalMobileLimits
+		limitsV = cameraVerticalMobileLimits
+	else:
+		limitsH = cameraHorizontalLimits
+		limitsV = cameraVerticalLimits
+	camera.limit_left = limitsH.x
+	camera.limit_right = limitsH.y
+	camera.limit_top = limitsV.x
+	camera.limit_bottom = limitsV.y
 	camera.zoom = cameraZoom
 
 	if not(room_name in world_state):
@@ -84,7 +95,12 @@ func create_objects(data: Dictionary):
 
 
 func on_load():
-	if self.audio_file:
-		WorldController.set_audio(self.audio_file)
+	set_audio()	
+
+
+func set_audio():
+	if self.audio_name:
+		if not audio_player.is_playing(audio_name):
+			audio_player.set_audio(self.audio_name)
 	else:
-		WorldController.remove_audio()
+		audio_player.stop_audio()

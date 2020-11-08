@@ -6,6 +6,7 @@
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 cameraHorizontalLimits = Vector2( -358, 1022 )
+cameraHorizontalMobileLimits = Vector2( -658, 1022 )
 objects_data_path = "res://Objects/Data/StudyRoom.json"
 room_name = "studyRoom"
 
@@ -25,5 +26,3 @@ position = Vector2( -335.2, 100.2 )
 texture = ExtResource( 2 )
 centered = false
 offset = Vector2( -30.7, -14.15 )
-
-[node name="Audio" type="AudioStreamPlayer" parent="." index="4"]

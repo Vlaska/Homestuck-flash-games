@@ -6,6 +6,7 @@
 
 [node name="RoomBase" instance=ExtResource( 1 )]
 cameraHorizontalLimits = Vector2( -170, 726 )
+cameraHorizontalMobileLimits = Vector2( -300, 726 )
 objects_data_path = "res://Objects/Data/Laundry.json"
 room_name = "laundry"
 

@@ -2,7 +2,9 @@
 
 [ext_resource path="res://Rooms/RoomBase.gd" type="Script" id=1]
 
-[node name="RoomBase" type="Node2D"]
+[node name="RoomBase" type="Node2D" groups=[
+"audio",
+]]
 script = ExtResource( 1 )
 
 [node name="Collisions" type="StaticBody2D" parent="."]
@@ -12,4 +14,3 @@ centered = false
 
 [node name="Objects" type="Node2D" parent="."]
 process_priority = -2
-[connection signal="ready" from="." to="." method="_on_RoomBase_ready"]

@@ -8,6 +8,8 @@ var mouse_in_dialog_box: bool = false
 var active = false
 
 const DialogSelect = preload("res://Dialog/DialogSelect.tscn")
+const InternalAudioPlayer = preload("res://InternalAudioPlayer.tscn")
+const ExternalAudioPlayer = preload("res://ExternalAudioPlayer.tscn")
 
 onready var world = get_node("/root/MainScene")
 onready var dialog_box = get_node("/root/MainScene/StaticHud/DialogBox")
@@ -24,8 +26,9 @@ var dialog_select = null
 var is_mobile: bool = false
 var font_size: int = 14
 var last_clicked_object = null
+var is_browser: bool = false
+var external_audio_menager_loaded = false
 
-var disable_audio: bool = false setget set_disable_audio
 export(float) var change_state_input_delay: float = 0.5
 var timer: float = 0.0
 
@@ -55,46 +58,64 @@ func get_game_state():
 	return game_state
 
 
-func set_disable_audio(value: bool):
-	disable_audio = value
-	if value:
-		pause_audio()
+func get_audio_player(name: String):
+	return self.get_node(name)
+
+
+func create_audio_player(name, files, loop):
+	if is_browser:
+		ExternalAudioPlayer.instance().init(files, name, loop)
 	else:
-		play_audio()
-
-
-func set_audio(path: String):
-	audio_player.stream = load(path)
-	audio_player.play()
-	if not disable_audio:
-		audio_player.stream_paused = false
-
-
-func play_audio():
-	audio_player.stream_paused = false
-
-
-func pause_audio():
-	audio_player.stream_paused = true
-
-
-func remove_audio():
-	audio_player.stop()
-	audio_player.stream = null
+		InternalAudioPlayer.instance().init(files, name, loop)
 
 
 func _ready():
 	var device_type = OS.get_name().to_lower()
 	if OS.has_feature("JavaScript"):
+		is_browser = true
 		is_mobile = JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)")
+		UpdateTimer.connect("timeout", self, "set_up_external_audio")
 	elif device_type == 'android' or device_type == 'ios':
 		is_mobile = true
+		set_up_audio()
+	else:
+		set_up_audio()
 	# if is_mobile:
 	# 	font_size = 24
 	InputManager.connect("single_tap", self, "_input")
 	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/MouseCursor.png"), Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/HandCursor.png"), Input.CURSOR_POINTING_HAND)
 	decrease_num_interactive_elements_under_mouse()
+	
+
+func set_up_external_audio():
+	if JavaScript.eval("audio_menager_loaded"):
+		set_up_audio()
+		external_audio_menager_loaded = true
+		UpdateTimer.disconnect("timeout", self, "set_up_external_audio")
+
+
+func set_up_audio():
+	create_audio_player(
+		"world",
+		{
+			"wind": ["res://Sound/wind.ogg", "./Sound/wind.ogg"],
+			"trickster": ["res://Sound/mspa_harlequin.ogg", "./Sound/mspa_harlequin.ogg"]
+		},
+		true
+	)
+	create_audio_player(
+			"piano",
+			{
+				"piano": ["res://Sound/afterthought-showtime_piano.ogg", "./Sound/afterthought-showtime_piano.ogg"]
+		},
+		true
+	)
+	get_tree().call_group("audio", "set_up_audio")
+
+
+func get_current_room():
+	return world.get_node("Scene/Room")
 
 
 func open_dialog_box(dialog_id: String, num_of_pages: int):
@@ -161,8 +182,12 @@ func decrease_num_interactive_elements_under_mouse():
 		num_interactive_elements_under_mouse = 0
 
 
+func has_enough_time_elapsed_since_state_change():
+	return timer >= change_state_input_delay
+
+
 func _input(event: InputEvent):
-	if not self.active or timer < change_state_input_delay:
+	if not (self.active and has_enough_time_elapsed_since_state_change()):
 		return
 	match self.game_state:
 		GAME_STATE.INTERACT:
