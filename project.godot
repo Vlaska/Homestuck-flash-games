@@ -9,41 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "InputEventAction",
-"class": "InputEventMultiScreenDrag",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventMultiScreenDrag.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventScreenPinch",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventScreenPinch.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventScreenTwist",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventScreenTwist.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenDrag",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenDrag.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenTap",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenTap.gd"
-}, {
-"base": "InputEventAction",
-"class": "InputEventSingleScreenTouch",
-"language": "GDScript",
-"path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
-}, {
-"base": "Control",
-"class": "Joystick",
-"language": "GDScript",
-"path": "res://Joystick.gd"
-}, {
 "base": "Reference",
 "class": "TextBreak",
 "language": "GDScript",
@@ -55,13 +20,6 @@ _global_script_classes=[ {
 "path": "res://Dialog/Scripts/TextOption.gd"
 } ]
 _global_script_class_icons={
-"InputEventMultiScreenDrag": "",
-"InputEventScreenPinch": "",
-"InputEventScreenTwist": "",
-"InputEventSingleScreenDrag": "",
-"InputEventSingleScreenTap": "",
-"InputEventSingleScreenTouch": "",
-"Joystick": "",
 "TextBreak": "",
 "TextOption": ""
 }
@@ -74,7 +32,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-InputManager="*res://InputManager.gd"
 UpdateTimer="*res://UpdateTimer.tscn"
 WorldController="*res://World/WorldController.tscn"
 

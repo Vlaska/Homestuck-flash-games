@@ -82,7 +82,6 @@ func _ready():
 		set_up_audio()
 	# if is_mobile:
 	# 	font_size = 24
-	InputManager.connect("single_tap", self, "_input")
 	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/MouseCursor.png"), Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(load("res://MouseAndButtons/Graphics/HandCursor.png"), Input.CURSOR_POINTING_HAND)
 	decrease_num_interactive_elements_under_mouse()

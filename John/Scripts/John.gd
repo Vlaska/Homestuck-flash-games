@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const FRAMERATE_CONVERSION = 35.0 / (60.0 * 3.5)
+
 var spd = 7  # * 60 # speed
 
 var vel = Vector2.ZERO
@@ -81,7 +83,7 @@ func move_state(_delta):
 				sprite.scale.x *= -1
 				input_area.scale.x *= -1
 
-		vel += (input_vector * spd / _delta) / 3.5
+		vel += (input_vector * spd / _delta) * FRAMERATE_CONVERSION
 
 		spriteAnimationState.travel(prefix_animation_name + "Walk")
 	else:

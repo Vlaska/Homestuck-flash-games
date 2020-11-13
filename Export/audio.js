@@ -9,6 +9,7 @@
  * @type {Object.<string, Howl>} players
  */
 let players = {};
+let is_muted = false;
 
 function get_name(player_name, audio_name) {
     return `${player_name}/${audio_name}`
@@ -79,4 +80,15 @@ function pause_audio(name, audio_name) {
 function is_playing(name, audio_name) {
     let n = get_name(name, audio_name);
     return (n in players) ? players[n].playing() : false;
+}
+
+function mute_unmute() {
+    is_muted = !is_muted;
+    for (let i in players) {
+        players[i].mute(is_muted);
+    }
+}
+
+if (window !== window.parent) {
+    window.parent.mute_unmute = mute_unmute;
 }
