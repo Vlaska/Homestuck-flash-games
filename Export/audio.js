@@ -1,7 +1,7 @@
 // import HowlPackage from "./howler.min.js";
 // import {
 //     Howl
-    // } = HowlPackage;
+// } = HowlPackage;
 // }
 // from "./howler.min.js";
 
@@ -82,13 +82,19 @@ function is_playing(name, audio_name) {
     return (n in players) ? players[n].playing() : false;
 }
 
-function mute_unmute() {
-    is_muted = !is_muted;
+function mute_unmute(mute = null) {
+    if (mute !== null) {
+        is_muted = mute;
+    } else {
+        is_muted = !is_muted;
+    }
     for (let i in players) {
         players[i].mute(is_muted);
     }
 }
 
-if (window !== window.parent) {
-    window.parent.mute_unmute = mute_unmute;
-}
+window.addEventListener("message", (event) => {
+    if (event.data.type === 'mute') {
+        mute_unmute(event.data.mute);
+    }
+});
